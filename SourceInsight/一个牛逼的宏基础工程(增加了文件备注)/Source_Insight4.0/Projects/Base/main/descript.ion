@@ -1,0 +1,12 @@
+main_config.em 配置文件
+main_entry.em 主入口
+main_event_handler.em 事件句柄
+main_help.em help菜单打开文件
+main_plugin.em 插件命令
+private_utils.em 环境变量配置接口
+public.em 一些公共函数,环境相关
+utils_common.em 一些公共函数,文件目录操作
+test.em 测试文件
+utils_window_oprate.em 关闭窗口操作
+utils_selection_operate.em 块注释与取消
+utils.em 官方简单的
