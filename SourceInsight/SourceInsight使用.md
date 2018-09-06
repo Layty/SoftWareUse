@@ -602,6 +602,10 @@ printf("hello\r\n");
 
 ## 一个牛逼的宏文件
 
+[放置在此](https://github.com/Layty/SoftWareUse)
+
+[fork form here](https://gitee.com/zouguoqing/Source_Insight4.0)
+
 ### 目录结构
 
 ```shell
