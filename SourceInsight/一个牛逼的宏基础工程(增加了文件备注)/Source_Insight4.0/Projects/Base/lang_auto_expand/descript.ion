@@ -1,0 +1,5 @@
+auto_expand_bash.em 关键字扩展,c也是调用这个
+auto_expand_c.em 关键字扩展,c也是调用这个去调用auto_expand_bash.em
+auto_expand_cpp.em 关键字扩展,最后调用bash的
+auto_expand_default.em 关键字扩展,最后调用bash的
+simc.em github上厉害的宏

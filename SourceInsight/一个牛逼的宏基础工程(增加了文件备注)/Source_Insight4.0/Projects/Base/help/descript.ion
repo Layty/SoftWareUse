@@ -1,0 +1,9 @@
+si_auto_complete.h Si宏的头文件,方便查看
+help_func.em 宏的全局快捷键
+doxy_help.h doxygen简要说明
+cmake_help.h Cmake说明
+notepad_plus_help.h notepad说明
+iso_c89_help.h C语言相关
+bash_help.h Bash的简要说明
+ascii_table.h ASC表
+si_help.h Si技巧,源于网络

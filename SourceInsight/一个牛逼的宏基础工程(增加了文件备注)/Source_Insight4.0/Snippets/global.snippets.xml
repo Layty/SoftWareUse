@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceInsightCodeSnippets
+	AppVer="4.00.0088"
+	AppVerMinReader="4.00.0019"
+	>
+	<SnippetList>
+		<Snippet
+			Name="case"
+			Description="case label"
+			Language="C/C++ Language"
+			Enabled="1"
+			EnableVariables="1"
+			StartOnNewLine="1"
+			>case $label$:
+			$end$
+			break;
+</Snippet>
+		<Snippet
+			Name="forsur"
+			Description="surround with for loop"
+			Language="C/C++ Language"
+			Enabled="1"
+			EnableVariables="1"
+			StartOnNewLine="1"
+			><![CDATA[for ($i$ = $start$; $i$ < $limit$; ++$i$)
+			{
+			$selection$
+			}
+]]></Snippet>
+		<Snippet
+			Name="if"
+			Description="if expression"
+			Language="C/C++ Language"
+			Enabled="1"
+			EnableVariables="1"
+			StartOnNewLine="1"
+			>if(/*condition*/)
+			{
+			/*expression*/
+			}
+</Snippet>
+		<Snippet
+			Name="ifelse"
+			Description="if else expression"
+			Language="C/C++ Language"
+			Enabled="1"
+			EnableVariables="1"
+			StartOnNewLine="1"
+			>if()
+			{
+			
+			}
+			else
+			{
+			
+			}
+</Snippet>
+		<Snippet
+			Name="inc"
+			Description="#include &quot;xxx.h&quot;"
+			Language="C/C++ Language"
+			Enabled="1"
+			EnableVariables="1"
+			StartOnNewLine="1"
+			>#include "xxx.h"
+</Snippet>
+		<Snippet
+			Name="main"
+			Description="main function"
+			Language="C/C++ Language"
+			Enabled="1"
+			EnableVariables="1"
+			StartOnNewLine="1"
+			>int main(int argc,char* argv[])
+{
+	$1
+}
+</Snippet>
+		<Snippet
+			Name="main"
+			Description="main function"
+			Language="C/C++ Language"
+			Enabled="1"
+			EnableVariables="1"
+			StartOnNewLine="1"
+			>int main(int argc, char* argv[])
+			{
+			
+			}
+</Snippet>
+		<Snippet
+			Name="newfunc"
+			Description="new function"
+			Language="C/C++ Language"
+			Enabled="1"
+			EnableVariables="1"
+			StartOnNewLine="1"
+			>$type$ $function_name$($params$)
+			{
+			$end$
+			}
+</Snippet>
+		<Snippet
+			Name="switch"
+			Description="switch block"
+			Language="C/C++ Language"
+			Enabled="1"
+			EnableVariables="1"
+			StartOnNewLine="1"
+			>switch ($value$)
+			{
+			$case$
+			}
+</Snippet>
+	</SnippetList>
+</SourceInsightCodeSnippets>
