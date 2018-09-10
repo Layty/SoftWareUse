@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<SourceInsightConfiguration
+	AppVer="4.00.0032"
+	AppVerMinReader="4.00.0008"
+	>
+	<!-- This is a Source Insight configuration file. -->
+	<!-- www.sourceinsight.com -->
+
+	<Languages>
+		<Language
+			Name="ASN.1"
+			Comment=""
+			CaseSensitive="1"
+			CPreprocessor="0"
+			SmartIndent="0"
+			ContainsSourceCode="1"
+			SyntaxFormatting="1"
+			UseRegexParsing="1"
+			SyntaxDecorations="0"
+			CommentStyles="0"
+			AllowSmartTab="0"
+			DetectNumbers="1"
+			CHexNum="0"
+			IntelHexNum="0"
+			MotorolaHexNum="0"
+			BasicHexNum="0"
+			IntelOctalNum="0"
+			QOctalNum="0"
+			NonAlphaNumIdentChars="_-"
+			>
+			<CustomParsing>
+				<Expression
+					SymbolType="Variable"
+					Pattern="\b([a-z][a-zA-Z0-9\-]*)"
+					RegexType="Perl Compatible"
+					/>
+				<Expression
+					SymbolType="Type Definition"
+					Pattern="\b([A-Z][\-a-zA-Z0-9]*)\s*::="
+					RegexType="Perl Compatible"
+					/>
+			</CustomParsing>
+			<Ranges>
+				<Range
+					Type="Line"
+					AllowNesting="0"
+					ParseInside="0"
+					ReadOnly="0"
+					StyleName="Comment Single Line"
+					StyleDelimiter="1"
+					StartString="--"
+					EscapeString=""
+					ValidateColumns="0"
+					FirstColumn="0"
+					LastColumn="0"
+					/>
+			</Ranges>
+			<Keywords>
+				<Item Keyword="ABSENT" Style="Keyword" />
+				<Item Keyword="ANY" Style="Keyword" />
+				<Item Keyword="APPLICATION" Style="Keyword" />
+				<Item Keyword="BEGIN" Style="Keyword" />
+				<Item Keyword="BIT STRING" Style="Keyword" />
+				<Item Keyword="BOOLEAN" Style="Keyword" />
+				<Item Keyword="BY" Style="Keyword" />
+				<Item Keyword="CHOICE" Style="Keyword" />
+				<Item Keyword="COMPONENT" Style="Keyword" />
+				<Item Keyword="DEFAULT" Style="Keyword" />
+				<Item Keyword="DEFINED" Style="Keyword" />
+				<Item Keyword="DEFINITIONS" Style="Keyword" />
+				<Item Keyword="END" Style="Keyword" />
+				<Item Keyword="ENUMERATED" Style="Keyword" />
+				<Item Keyword="EXPORTS" Style="Keyword" />
+				<Item Keyword="EXTERNAL" Style="Keyword" />
+				<Item Keyword="FALSE" Style="Keyword" />
+				<Item Keyword="FROM" Style="Keyword" />
+				<Item Keyword="GeneralizedTime" Style="Keyword" />
+				<Item Keyword="IDENTIFIER" Style="Keyword" />
+				<Item Keyword="IMPLICIT" Style="Keyword" />
+				<Item Keyword="IMPORTS" Style="Keyword" />
+				<Item Keyword="INCLUDES" Style="Keyword" />
+				<Item Keyword="INTEGER" Style="Keyword" />
+				<Item Keyword="MAX" Style="Keyword" />
+				<Item Keyword="MIN" Style="Keyword" />
+				<Item Keyword="MINUS-INFINITY" Style="Keyword" />
+				<Item Keyword="NULL" Style="Keyword" />
+				<Item Keyword="NumericString" Style="Keyword" />
+				<Item Keyword="OBJECT" Style="Keyword" />
+				<Item Keyword="ObjectDescriptor" Style="Keyword" />
+				<Item Keyword="OCTET" Style="Keyword" />
+				<Item Keyword="OPTIONAL" Style="Keyword" />
+				<Item Keyword="PLUS-INFINITY" Style="Keyword" />
+				<Item Keyword="PRESENT" Style="Keyword" />
+				<Item Keyword="PRIVATE" Style="Keyword" />
+				<Item Keyword="REAL" Style="Keyword" />
+				<Item Keyword="SEQUENCE" Style="Keyword" />
+				<Item Keyword="SEQUENCE OF" Style="Keyword" />
+				<Item Keyword="SET" Style="Keyword" />
+				<Item Keyword="SET OF" Style="Keyword" />
+				<Item Keyword="SIZE" Style="Keyword" />
+				<Item Keyword="STRING" Style="Keyword" />
+				<Item Keyword="StringStore" Style="Keyword" />
+				<Item Keyword="Syntax" Style="Keyword" />
+				<Item Keyword="SYNTAX" Style="Keyword" />
+				<Item Keyword="TAGS" Style="Keyword" />
+				<Item Keyword="TRUE" Style="Keyword" />
+				<Item Keyword="UNIVERSAL" Style="Keyword" />
+				<Item Keyword="UTCTime" Style="Keyword" />
+				<Item Keyword="VisibleString" Style="Keyword" />
+				<Item Keyword="WITH" Style="Keyword" />
+			</Keywords>
+		</Language>
+	</Languages>
+</SourceInsightConfiguration>
