@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://www.cnblogs.com/benhuan/p/3302114.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="same-origin">
+<title>doxygen的特定命令 - benhuan - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./doxygen的特定命令 - benhuan - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./doxygen的特定命令 - benhuan - 博客园_files/bundle-coffee.css">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./doxygen的特定命令 - benhuan - 博客园_files/bundle-coffee-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/benhuan/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/benhuan/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/benhuan/wlwmanifest.xml">
+<script async="" src="./doxygen的特定命令 - benhuan - 博客园_files/analytics.js"></script><script src="./doxygen的特定命令 - benhuan - 博客园_files/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">var currentBlogApp = 'benhuan', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="./doxygen的特定命令 - benhuan - 博客园_files/blog-common.js" type="text/javascript"></script>
+<style>#haloword-pron { background: url(chrome-extension://mkhpclppnoafbonikhggdedkekpbglbb/img/icon.svg) -94px -34px; }#haloword-pron:hover { background: url(chrome-extension://mkhpclppnoafbonikhggdedkekpbglbb/img/icon.svg) -111px -34px; }#haloword-close { background: url(chrome-extension://mkhpclppnoafbonikhggdedkekpbglbb/img/icon.svg) -94px 0; }#haloword-close:hover { background: url(chrome-extension://mkhpclppnoafbonikhggdedkekpbglbb/img/icon.svg) -111px 0; }</style><link rel="stylesheet" type="text/css" href="chrome-extension://lfjamigppmepikjlacjdpgjaiojdjhoj/css/menu.css"></head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/benhuan/"><img id="blogLogo" src="./doxygen的特定命令 - benhuan - 博客园_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/benhuan/">benhuan</a></h1>
+<h2></h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+	<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/benhuan/">首页</a></li>
+	<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+	<li><a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/benhuan">联系</a></li>
+	<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+	<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/benhuan/rss">订阅</a>
+	<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/benhuan/rss"><img src="./doxygen的特定命令 - benhuan - 博客园_files/xml.gif" alt="订阅"></a></li>
+</ul>
+
+
+			<div class="blogStats">
+				
+				<div id="blog_stats">
+<!--done-->
+随笔- 121&nbsp;
+文章- 0&nbsp;
+评论- 0&nbsp;
+</div>
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/benhuan/p/3302114.html">doxygen的特定命令</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><h1><strong style="font-size: 17px;">摘要</strong><span style="font-size: 17px; font-weight: 100;">：本文给出doxygen所支持的全部的一个列表，同时对其进行逐一解释与说明，对于使用doxygen来有重要参考价值。本文主要来自对doxygen官方文档的翻译。</span></h1>
+<div>
+<h2><a id="cmd_intro"></a>概述</h2>
+所有在文档中的命令都开始于一个反斜杠(<strong>\</strong>)或者是一个at-符号(<strong>@</strong>)。如果你喜欢，可以把所有的以反斜杠开头的命令都换成以at-符号开头的命令。
+
+有些命令有一个或多个参数，每一个参数都其确定的范围：
+<ul>
+	<li>如果使用 &lt;尖&gt;括号说明参数是一个单独单词。</li>
+	<li>如果使用(圆)括号说明参数一直到命令所在的结束。</li>
+	<li>如果使用{大}括号说明参数一直延伸到本段结束。一个段落的结束以一个空行来标识，或者是一个段落标记。</li>
+	<li>如果使用[中]括号说明参数是可选的。</li>
+</ul>
+下面是一个以字母顺序的列表，列表给出了所有可用的命令：
+<div><a href="http://zhanglongqi.com/archives/1109#cmda">a</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdaddindex">addindex</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdaddtogroup">addtogroup</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdanchor">anchor</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdarg">arg</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdattention">attention</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdauthor">author</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdb">b</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdbrief">brief</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdbug">bug</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdc">c</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmdcallgraph">callgraph</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcallergraph">callergraph</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcategory">category</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdclass">class</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcode">code</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdcond">cond</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcopybrief">copybrief</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcopydetails">copydetails</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmdcopydoc">copydoc</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddate">date</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddef">def</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddefgroup">defgroup</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmddeprecated">deprecated</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddetails">details</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddir">dir</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddontinclude">dontinclude</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddot">dot</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmddotfile">dotfile</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmde">e</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdelse">else</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdelseif">elseif</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdem">em</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdendcode">endcode</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendcond">endcond</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdenddot">enddot</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendhtmlonly">endhtmlonly</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendif">endif</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmdendlatexonly">endlatexonly</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendlink">endlink</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendmanonly">endmanonly</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendmsc">endmsc</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendverbatim">endverbatim</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdendxmlonly">endxmlonly</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdenum">enum</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmdexample">example</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdexception">exception</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdextends">extends</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfdollar">f$</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfbropen">f[</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfbrclose">f]</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfcurlyopen">f{</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfcurlyclose">f}</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfile">file</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfn">fn</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdheaderfile">headerfile</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdhideinitializer">hideinitializer</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmdhtmlinclude">htmlinclude</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdhtmlonly">htmlonly</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdif">if</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdifnot">ifnot</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdimage">image</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdimplements">implements</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdinclude">include</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdincludelineno">includelineno</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdingroup">ingroup</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmdinternal">internal</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdinvariant">invariant</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdinterface">interface</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdlatexonly">latexonly</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdli">li</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdline">line</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdlink">link</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdmainpage">mainpage</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdmanonly">manonly</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdmemberof">memberof</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmdmsc">msc</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdn">n</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdname">name</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdnamespace">namespace</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdnosubgrouping">nosubgrouping</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdnote">note</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdoverload">overload</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdp">p</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpackage">package</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpage">page</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpar">par</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmdparagraph">paragraph</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdparam">param</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpost">post</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdpre">pre</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdprivate">private</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdprivate">privatesection</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdproperty">property</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdprotected">protected</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmdprotected">protectedsection</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdprotocol">protocol</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpublic">public</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpublic">publicsection</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdref">ref</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdrelates">relates</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdrelatesalso">relatesalso</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdremarks">remarks</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmdreturn">return</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdretval">retval</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsa">sa</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsection">section</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsee">see</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdshowinitializer">showinitializer</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsince">since</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdskip">skip</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdskipline">skipline</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdstruct">struct</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmdsubpage">subpage</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsubsection">subsection</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsubsubsection">subsubsection</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdtest">test</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdthrow">throw</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdtodo">todo</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdtparam">tparam</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdtypedef">typedef</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdunion">union</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmduntil">until</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdvar">var</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdverbatim">verbatim</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdverbinclude">verbinclude</a>&nbsp;|<a href="http://zhanglongqi.com/archives/1109#cmdversion">version</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdwarning">warning</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdweakgroup">weakgroup</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdxmlonly">xmlonly</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdxrefitem">xrefitem</a>&nbsp;|</div>
+<div><a href="http://zhanglongqi.com/archives/1109#cmddollar">$</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdat">@</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdbackslash">\</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdamp">&amp;</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdtilde">~</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdlt">&lt;</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdgt">&gt;</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdhash">#</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdperc">%</a>&nbsp;|&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdquot">"</a></div>
+下一节我们将具体介绍所有doxygen认识的命令，对于不认识的命令doxygen把它当作一般的文本。
+<h2>命令的具体介绍</h2>
+<h3 id="cmdaddtogroup">\addtogroup &lt;name&gt; [(title)]</h3>
+本命令就像<a href="http://zhanglongqi.com/archives/1109#cmddefgroup">\defgroup</a>定义一个组，但它不会因为多次使用相同的名字而收到一个警告。这些组会在最后合并到一起，形成一个逻辑上的大组。
+
+标题是可选的，所以本命令也可以把一些对象加入一个已经存在的组中，使用@{ 和 @}的形式，如下：
+<div>
+<div>
+<div>/*!\addtogroup mygrp
+* &nbsp;Additional documentation for group `mygrp'
+* &nbsp;@{
+*//*! * &nbsp;A function
+*/
+void func1()
+{
+}/*!Another function */
+void func2()
+{
+}/*!@} */</div>
+</div>
+</div>
+<dl><dt><b>参看:</b></dt><dd>页面<a href="http://www.doxygen.nl/grouping.html">分组</a>, 命令<a href="http://zhanglongqi.com/archives/1109#cmddefgroup">\defgroup</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdingroup">\ingroup</a>&nbsp;和&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdweakgroup">\weakgroup</a>。</dd></dl>
+
+<hr>
+
+<h3 id="cmdcallgraph">\callgraph</h3>
+当这个命令在一个函数或方法的注释里，并且设置文件中的HAVE_DOT被设置为“YES”，那么doxygen会产生出一个函数调用图。此时不会理会设置文件中的CALL_GRAPH选项的值。
+
+<dl><dt><b>注意：</b></dt><dd>这个调用图的完整性与正确性依赖于doxygen的解析，目前它还不是完美的。</dd></dl>
+
+<hr>
+
+<h3 id="cmdcallergraph">\callergraph</h3>
+当这个命令在一个函数或方法的注释里，并且设置文件中的HAVE_DOT被设置为“YES”，那么doxygen会产生出一个函数调用者图。此时不会理会设置文件中的CALLER_GRAPH选项的值。
+
+<dl><dt><b>注意：</b></dt><dd>这个调用者图的完整性与正确性依赖于doxygen的解析，目前它还不是完美的。</dd></dl>
+
+<hr>
+
+<h3 id="cmdcategory">\category &lt;name&gt; [&lt;header-file&gt;] [&lt;header-name&gt;]</h3>
+仅针对于带类的C：说明这个文档块属于一个类，它的名字叫&lt;name&gt;。 这个命令的参数意义与命令class一样。
+
+<dl><dt><b>参看：</b></dt><dd>章节<a href="http://zhanglongqi.com/archives/1109#cmdclass">\class</a>。</dd></dl>
+
+<hr>
+
+<h3 id="cmdclass">\class &lt;name&gt; [&lt;header-file&gt;] [&lt;header-name&gt;]</h3>
+指明一个文档块属于一个类，它的名字叫&lt;name&gt;，header-file与header-name是可选的。如果header-file被指定，那么会产生一个指定该头文件复本的一个链接。如果header-name被指定，那么就可以覆盖该链接的标题，以及文档中其它使用这头文件的情况，当一个头文件存在于一个非标准的搜索目录时很有用（比如&lt;X11/X.h&gt;）。通过header-name你可以指定这个“include”的指令显示的效果，是在名字周围加双引号或是加尖括号。当没有指定时，尖括号是默认的效果。请注意，这两个参数可以通过命令<a href="http://zhanglongqi.com/archives/1109#cmdheaderfile">\headerfile</a>单独指定。
+
+<dl><dt><b>示例：</b></dt><dd>
+<div>
+<div>
+<div>/* A dummy class */
+class Test
+{
+};/*!\class Test class.h "inc/class.h"
+* &nbsp;\brief This is a test class.
+*
+* Some details about the Test class
+*/</div>
+</div>
+</div>
+点击&nbsp;<a href="http://www.doxygen.nl/examples/class/html/index.html">这里</a>&nbsp;看看这段代码的产生的文档。
+
+</dd></dl>
+
+<hr>
+
+<h3 id="cmddef">\def &lt;name&gt;</h3>
+指出这块注释属于一个<code>#define</code>宏。
+
+<dl><dt><b>示例：</b></dt><dd>
+<div>
+<div>
+<div>/*!\file define.h
+\brief testing definesThis is to test the documentation of defines.
+*//*! &nbsp;\def MAX(x,y)
+Computes the maximum of \a x and \a y.
+*//*! &nbsp; Computes the absolute value of its argument \a x.
+*/
+#define ABS(x) (((x)&amp;gt;0)?(x):-(x))
+#define MAX(x,y) ((x)&amp;gt;(y)?(x):(y))
+#define MIN(x,y) ((x)&amp;gt;(y)?(y):(x))
+/*!&amp;gt; Computes the minimum of \a x and \a y. */</div>
+</div>
+</div>
+点击&nbsp;<a href="http://www.doxygen.nl/examples/define/html/define_8h.html">这里</a>&nbsp;查看这这段代码产生的文档。
+
+</dd></dl>
+
+<hr>
+
+<h3 id="cmddefgroup">\defgroup &lt;name&gt; (group title)</h3>
+这指明当前的注释块属于一个类、文件或名字空间<a href="http://www.doxygen.nl/grouping.html#modules">分组</a>。这被用于把类、文件或名字空间放于一个组。你同时也可以把一个组放于另一个组里，这样形成一个继承的结构。
+
+&lt;name&gt; 参数应该是一个单独的标识符。
+
+<dl><dt><b>参看：</b></dt><dd>页面&nbsp;<a href="http://www.doxygen.nl/grouping.html">分组</a>, 章节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdingroup">\ingroup</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdaddtogroup">\addtogroup</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdweakgroup">\weakgroup</a>。</dd></dl>
+
+<hr>
+
+<h3 id="cmddir">\dir [&lt;path fragment&gt;]</h3>
+指明当前注释块包含一个目录的文档。参数“path fragment”应该包含目录名，并且足够用于区分不同的目录。选项<a href="http://www.doxygen.nl/config.html#cfg_show_dirs">SHOW_DIRECTORIES</a>用于指明是否显示一个目录的信息，<a href="http://www.doxygen.nl/config.html#cfg_strip_from_path">STRIP_FROM_PATH</a>用于指明在输出时过虑掉的前缀。
+
+<hr>
+
+<h3 id="cmdenum">\enum &lt;name&gt;</h3>
+指明当前注释块包含一个枚举类型的文档，这个枚举类型的名字是“name”。如果这个枚举是一个类的成员，并且文档不在类的里面，那么作用域类也应该指出。如果当前的注释块放在一个枚举声明的前面，这个 \enum 命令可以省去。
+
+<dl><dt><b>注意：</b></dt><dd>匿名的枚举类型是不能文档化的，但是匿名的枚举值是可以的。</dd></dl><dl><dt><b>注意：</b></dt><dd>一个匿名的枚举类型是不能文档化的，但是它的值可以。</dd></dl><dl><dt><b>示例：</b></dt><dd>
+<div>
+<div>
+<div>class Test
+{
+public:
+enum TEnum { Val1, Val2 };/*!Another enum, with inline docs */
+enum AnotherEnum
+{
+V1, /*!&amp;lt; value 1 */
+V2 &nbsp;/*!&amp;lt; value 2 */
+};
+};/*!\class Test
+* The class description.
+*//*!\enum Test::TEnum
+* A description of the enum type.
+*//*!\var Test::TEnum Test::Val1
+* The description of the first enum value.
+*/</div>
+</div>
+</div>
+点击<a href="http://www.doxygen.nl/examples/enum/html/class_test.html">这里</a>&nbsp;查看由doxygen生成的相应的文档。
+
+</dd></dl>
+
+<hr>
+
+<h3 id="cmdexample">\example &lt;file-name&gt;</h3>
+指明一个注释块包含的文档属于一个源代码示例。源代码文件的名字叫&lt;file-name&gt;。这个文件的内容将被包含在文档中，在这本块注释产生的文档之后。所有的示例被放在一个列表之中。源代码会被扫描，以发现其中已文档化的成员和类。如果发现了，会在文档产生一个交叉引用。源代码的文件或目录可能通过配制选项<a href="http://www.doxygen.nl/config.html#cfg_example_path">EXAMPLE_PATH</a>，在配制文件中指定。
+
+如果&lt;file-name&gt;不在<a href="http://www.doxygen.nl/config.html#cfg_example_path">EXAMPLE_PATH</a>中，你可以指定一个绝对路径来使用它。
+
+如果这个示例存在多个源代码，命令 \include 可以被使用。
+
+<dl><dt><b>示例：</b></dt><dd>
+<div>
+<div>
+<div>/** A Test class.
+* &nbsp;More details about this class.
+*/class Test
+{
+public:
+/** An example member function.
+* &nbsp;More details about this function.
+*/
+void example();
+};void Test::example() {}/** \example example_test.cpp
+* This is an example of how to use the Test class.
+* More details about this example.
+*/</div>
+</div>
+</div>
+这里example_test.cpp的内容如下：
+<div>
+<div>
+<div>void main()
+{
+Test t;
+t.example();
+}</div>
+</div>
+</div>
+点击<a href="http://www.doxygen.nl/examples/example/html/examples.html">这里</a>&nbsp;查看由doxygen产生的相应的文档。
+
+</dd></dl><dl><dt><b>参考：</b></dt><dd>章节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdinclude">\include</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdextends">\extends &lt;name&gt;</h3>
+此命令可用于手动指示一个继承关系，当编程语言本身不支持这个概念（如C）。
+
+在示例文件夹中的<code>manual.c</code>文件展示了如何使用这个命令。
+
+点击<a href="http://www.doxygen.nl/examples/manual/html/index.html">这里</a>查看由doxygen生成的相应的文档。
+
+<dl><dt><b>相关参考</b></dt><dd>章节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdimplements">\implements</a>&nbsp;和章节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdmemberof">\memberof</a></dd></dl>
+
+<hr>
+
+<h3 id="cmdfile">\file [&lt;name&gt;]</h3>
+表明一个注释块包含一个源文件或头文件文档，它的名称是&lt;name&gt; 。这里的名字可以包含路径，如果文件名不唯一的。如果文件名被省略（比如，在 \file 后面是空白），\file 所产生的文档属于命令所在的文件的文档。
+
+<dl><dt><b>重要：</b></dt><dd>只有文件本身是文档化的的时候，文件所定义的全局变量、函数、类型别名、枚举的文档才使包含在输出。</dd></dl><dl><dt><b>例如：</b></dt><dd>
+<div>
+<div>
+<div>/** \file file.h
+* A brief file description.
+* A more elaborated file description.
+*/</div>
+</div>
+</div>
+</dd></dl>/**
+* A global integer value.
+* More details about this value.
+*/
+extern int globalValue;
+
+</div>
+点击<a href="http://www.doxygen.nl/examples/file/html/file_8h.html">这里</a>查看由doxygen生成的相应的文档。
+
+<dl><dt><b>注意：</b></dt><dd>在上面的示例中，<a href="http://www.doxygen.nl/config.html#cfg_javadoc_autobrief">JAVADOC_AUTOBRIEF</a>&nbsp;选项已经被设置为“YES”。</dd></dl>
+
+<hr>
+
+<h3 id="cmdfn">\fn (函数声明)</h3>
+表明一个注释块包含一个函数（全局或作为一个类的成员）的文档。<em>只有</em>当注释块<em>不在</em>函数的声明或定义的前面（或者后面）时才需要这个命令。
+
+如果注释块<em>在</em>函数声明或定义的前面时，这个命令可以也应该省略。
+
+一个完整的函数声明，包括参数在内，需要在 \fn 的&nbsp;<em>单独</em>&nbsp;一行,这是因为 \fn 命令的参数在行结束时结束。
+
+<dl><dt><b>警告：</b></dt><dd>不要使用此命令，如果不是绝对必要，因为它会导致信息重复，从而错误。</dd></dl><dl><dt><b>例如：</b></dt><dd>
+<div>
+<div>
+<div>class Test
+{
+public:
+const char *member(char,int) throw(std::out_of_range);
+};</div>
+</div>
+</div>
+</dd></dl>const char *Test::member(char c,int n) throw(std::out_of_range) {}
+
+/*!\class Test
+* \brief Test class.
+*
+* Details about Test.
+*/
+
+/*!\fn const char *Test::member(char c,int n)
+* &nbsp;\brief A member function.
+* &nbsp;\param c a character.
+* &nbsp;\param n an integer.
+* &nbsp;\exception std::out_of_range parameter is out of range.
+* &nbsp;\return a character pointer.
+*/
+
+点击<a href="http://www.doxygen.nl/examples/func/html/class_test.html">这里</a>查看由doxygen生成的相应的文档。
+
+<dl><dt><b>相关参考</b></dt><dd>章节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdvar">\var</a>&nbsp;和章节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdtypedef">\typedef</a></dd></dl>
+
+<hr>
+
+<h3 id="cmdheaderfile">\headerfile &lt;header-file&gt; [&lt;header-name&gt;]</h3>
+用于生成class、struct、union 文档，文档应该在定义之前。这个命令的参数与命令&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdclass">\cmdclass</a>的第二、第三参数相同。&lt;header-file&gt; 应该是一个包含相应class、struct、union定义的文件。该&lt;header-name&gt;参数可以被用来覆盖的是在文档中使用的类的东西以外的其他链接名称&lt;header-file&gt; 。这可能是有用的，如果名称不在默认的包含路径（如&lt;X11/X.h&gt; ）。
+
+使用&lt;header-name&gt;参数，你可以指定 include 语句的风格，是使用双引号还是使用尖括号。如果没有指定，默认地，使用尖括号。
+
+如果只给出一对双引号，而没有 &lt;header-file&gt; 或者 &lt;header-name&gt; 参数，此时当前文件会使用双引号替换。所以，如果一个 \headerfile 命令的注释块在文件test.h内部，那么下面3个方式是相同的：
+<div>
+<pre>\headerfile test.h "test.h"
+\headerfile test.h ""
+\headerfile ""</pre>
+</div>
+如果想使用尖括号风格的，你不需要额外指定信息，不过你需要显式指定使用尖括号：
+<div>
+<pre>\headerfile test.h &lt;test.h&gt;
+\headerfile test.h &lt;&gt;
+\headerfile &lt;&gt;</pre>
+</div>
+与全局的设置相反的，你可以通过把&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_force_local_includes">FORCE_LOCAL_INCLUDES</a>&nbsp;设置为&nbsp;<code>YES</code>&nbsp;来使用局部的包含行为。
+
+为了不把所有的包含信息合并，可以设置&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_show_include_files">SHOW_INCLUDE_FILES</a>&nbsp;为&nbsp;<code>NO</code>。
+
+<hr>
+
+<h3 id="cmdhideinitializer">\hideinitializer</h3>
+默认情况，当一个值的定义或初始化式的长度不大于30行的时候，定义或初始式会被显示。通过把这个命令插入定义或初始式中来隐藏它们。
+
+<dl><dt><b>相关参考</b></dt><dd>小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdshowinitializer">\showinitializer</a>。</dd></dl>
+
+<hr>
+
+<h3 id="cmdimplements">\implements &lt;name&gt;</h3>
+此命令可用于手动指示一个继承关系，当编程语言本身不支持这个概念（如C）。
+
+在示例文件夹中的<code>manual.c</code>文件展示了如何使用这个命令。
+
+点击<a href="http://www.doxygen.nl/examples/manual/html/index.html">这里</a>查看由doxygen生成的相应的文档。
+
+<dl><dt><b>相关参考</b></dt><dd>小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdextends">\extends</a>&nbsp;和小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdmemberof">\memberof</a></dd></dl>
+
+<hr>
+
+<h3 id="cmdingroup">\ingroup (&lt;groupname&gt; [&lt;groupname&gt; &lt;groupname&gt;])</h3>
+如果 \ingroup 命令放置于一个类、文件或名字空间的注释块，那么它将会被加入这个组，或者说被分入名字为 &lt;groupname&gt; 的组。
+
+<dl><dt><b>相关参考</b></dt><dd>页面&nbsp;<a href="http://www.doxygen.nl/grouping.html">Grouping</a>，小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddefgroup">\defgroup</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdaddtogroup">\addtogroup</a>&nbsp;和&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdweakgroup">\weakgroup</a></dd></dl>
+
+<hr>
+
+<h3 id="cmdinterface">\interface &lt;name&gt; [&lt;header-file&gt;] [&lt;header-name&gt;]</h3>
+表明一个注释块包含一个接口的文件，这个接口的名字是 &lt;name&gt;。这些参数的意义与 \class 命令相同。
+
+<dl><dt><b>相关参考</b></dt><dd>小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdclass">\class</a>。</dd></dl>
+
+<hr>
+
+<h3 id="cmdinternal">\internal</h3>
+这个命令在输出中加入“仅供内部使用”的文本，并且在命令&nbsp;<code>\internal</code>&nbsp;<em>之后</em>&nbsp;直到注释块或小节（哪个先达到）结束的全部文本都标记为“内部使用的”。
+
+如果命令 \internal 在一个小节内部（参看<a href="http://zhanglongqi.com/archives/1109#cmdsection">\section</a>&nbsp;示例)），那么在这个命令之后的包括全部子小节都被认为是内部的。只有一个新的小节，并且与当前的小节是同一等级的，才会改变这个情况。
+
+你可以在设置文件里设置&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_internal_docs">INTERNAL_DOCS</a>&nbsp;的值来控制内部文档的显示或隐藏。
+
+<hr>
+
+<h3 id="cmdmainpage">\mainpage [(title)]</h3>
+如果 \mainpage 被放置于一个注释块里，那么这个注释块将被用于产生一个首页（在HTML的输出中）或者是第一章（在<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">中）。
+
+标题参数是可选的，在doxygen生成的过程中它会替代默认的标题。如果不想有一个标题，你可以指定<code>notitle</code>&nbsp;作为 \mainpage 的参数。
+
+这是一个示例：
+<div>
+<div>
+<div>/*!\mainpage 我的个人定制首页
+*
+* \section intro_sec &nbsp;概述
+*
+* 这是概述 *
+* \section install_sec 安装
+*
+* \subsection step1 Step 1: Opening the box
+*
+* 等等……
+*/</div>
+</div>
+</div>
+你可以通过 \ref index 来引用首页。 （ 如果树视图被禁用了，你可以使用 \ref main）
+
+<dl><dt><b>相关参考</b></dt><dd>小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsection">\section</a>，小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsubsection">\subsection</a>&nbsp;以及小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpage">\page</a>。</dd></dl>
+
+<hr>
+
+<h3 id="cmdmemberof">\memberof &lt;name&gt;</h3>
+这个命令指定一个函数是一个类的成员，它处理的方式与<a href="http://zhanglongqi.com/archives/1109#cmdrelates">\relates</a>&nbsp;很相似，两者唯一的区别是这个命令使得那个函数被作为一个真正的成员来处理。这是非常有用的，当程序设计记语言本身不支持成员函数的概念时（比如C语言）。
+
+这个命令可以与&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpublic">\public</a>，<a href="http://zhanglongqi.com/archives/1109#cmdprotected">\protected</a>&nbsp;或者&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdprivate">\private</a>&nbsp;一同使用。
+
+在示例文件夹中的<code>manual.c</code>文件展示了如何使用这个命令。
+
+点击<a href="http://www.doxygen.nl/examples/manual/html/index.html">这里</a>查看由doxygen生成的相应的文档。
+
+<dl><dt><b>相关参考</b></dt><dd>小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdextends">\extends</a>，<a href="http://zhanglongqi.com/archives/1109#cmdimplements">\implements</a>，&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpublic">\public</a>，<a href="http://zhanglongqi.com/archives/1109#cmdprotected">\protected</a>&nbsp;以及&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdprivate">\private</a>。</dd></dl>
+
+<hr>
+
+<h3 id="cmdname">\name (header)</h3>
+这个命令把注释块放到一个成员组的头文件定义中。这个注释块应该紧跟着这样的&nbsp;<code>//@{ ... //@}</code>&nbsp;结构，这个结构包含这个组的成员。
+
+参见&nbsp;<a href="http://www.doxygen.nl/grouping.html#memgroup">Member Groups</a>&nbsp;的示例。
+
+<hr>
+
+<h3 id="cmdnamespace">\namespace &lt;name&gt;</h3>
+指明当前注释块包含一个名字空间的文档，这个名字空间有一个标识符 &lt;name&gt;。
+
+<hr>
+
+<h3 id="cmdnosubgrouping">\nosubgrouping</h3>
+这个命令可以放在一个类的文档内部。它可以与成员分组一起使用，这个命令的使用可以避免doxygen把一个成员组当作Public/Protected/Private/……等等小节的子组。
+
+<hr>
+
+<h3 id="cmdoverload">\overload [(函数声明)]</h3>
+此命令可用于生成一个重载成员函数下列标准文本：
+
+“这是一个提供便利的重载的成员函数。它与之前函数的区别只在于它们接受的参数不同。”
+
+如果该重载成员函数的文档不是放置在函数声明或定义的上部，可选的参数会被使用以确定正确的函数。
+
+在当前文档块内的任何其它的文档都会添加在这个消息之后。
+
+<dl><dt><b>注1：</b></dt><dd>你需要保证确实存在一个较早文档化的成员被这个函数重载。为了阻止文档被排序，你需要把选项<a href="http://www.doxygen.nl/config.html#cfg_sort_member_docs">SORT_MEMBER_DOCS</a>设置为NO。</dd></dl><dl><dt><b>注2：</b></dt><dd>\overload命令在单行注释里不起作用。</dd></dl><dl><dt><b>例如：</b></dt><dd>
+<div>
+<div>
+<div>class Test
+{
+public:
+void drawRect(int,int,int,int);
+void drawRect(const Rect &amp;amp;r);
+};</div>
+</div>
+</div>
+</dd></dl>void Test::drawRect(int x,int y,int w,int h) {}
+void Test::drawRect(const Rect &amp;amp;r) {}
+
+/*!\class Test
+* &nbsp;\brief A short description.
+*
+* &nbsp;More text.
+*/
+
+/*!\fn void Test::drawRect(int x,int y,int w,int h)
+* This command draws a rectangle with a left upper corner at ( \a x , \a y ),
+* width \a w and height \a h.
+*/
+
+/*! * \overload void Test::drawRect(const Rect &amp;amp;r)
+*/
+
+点击<a href="http://www.doxygen.nl/examples/overload/html/class_test.html">这里</a>查看由doxygen生成的相应的文档。
+
+<hr>
+
+<h3 id="cmdpackage">\package &lt;name&gt;</h3>
+指明一个注释块包含一个名为&lt;name&gt;的Java包的文档。
+
+<hr>
+
+<h3 id="cmdpage">\page &lt;名字&gt; (标题)</h3>
+指出一个注释块包含一块文档，这些文档不是直接与一个特定的类、文件或成员相关联。HTML产生器将创建一个单独的页面来包含这个文档。<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">在章节里，产生器将新建一个小节。
+
+<dl><dt><b>例如：</b></dt><dd>
+<div>
+<div>
+<div>/*!\page page1 A documentation page
+Leading text.
+\section sec An example section
+This page contains the subsections \ref subsection1 and \ref subsection2.
+For more info see page \ref page2.
+\subsection subsection1 The first subsection
+Text.
+\subsection subsection2 The second subsection
+More text.
+*/</div>
+</div>
+</div>
+</dd></dl>/*!\page page2 Another page
+Even more info.
+*/
+
+点击<a href="http://www.doxygen.nl/examples/page/html/pages.html">这里</a>查看由doxygen生成的相应的文档。
+
+<dl><dt><b>注意：</b></dt><dd>参数&lt;名字&gt;只能包含字母和数字的组合。在&lt;名字&gt;参数里，如果你想使用大写字母（如<code>MYPAGE1</code>），或者混合大小写（如<code>MyPage1</code>），你应该设置<code>CASE_SENSE_NAMES</code>的值为<code>YES</code>。然而这只有当你的文件系统是大小写敏感才是可取。否则的话（为了更好的移植性）你应该总是使用小写字母（如<code>mypage1</code>）来作为&lt;名字&gt;，在所有引用这个页的地方都只要简单地使用小写。</dd></dl><dl><dt><b>相关参考</b></dt><dd>小节<a href="http://zhanglongqi.com/archives/1109#cmdsection">\section</a>，小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsubsection">\subsection</a>和小节<a href="http://zhanglongqi.com/archives/1109#cmdref">\ref</a>。</dd></dl>
+
+<hr>
+
+<h3 id="cmdprivate">\private</h3>
+Indicates that the member documented in the comment block is private, i.e., should only be accessed by other members in the same class.
+
+Note that Doxygen automatically detects the protection level of members in object-oriented languages. This command is intended for use only when the language does not support the concept of protection level natively (e.g. C, PHP 4).
+
+For starting a section of private members, in a way similar to the "private:" class marker in C++, use \privatesection.
+
+<dl><dt><b>相关参考</b></dt><dd>sections&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdmemberof">\memberof</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpublic">\public</a>, and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdprotected">\protected</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdproperty">\property (qualified property name)</h3>
+Indicates that a comment block contains documentation for a property (either global or as a member of a class). This command is equivalent to \var and \fn.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfn">\fn</a>&nbsp;and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdvar">\var</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdprotected">\protected</h3>
+Indicates that the member documented in the comment block is protected, i.e., should only be accessed by other members in the same or derived classes.
+
+Note that Doxygen automatically detects the protection level of members in object-oriented languages. This command is intended for use only when the language does not support the concept of protection level natively (e.g. C, PHP 4).
+
+For starting a section of protected members, in a way similar to the "protected:" class marker in C++, use \protectedsection.
+
+<dl><dt><b>相关参考</b></dt><dd>sections&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdmemberof">\memberof</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpublic">\public</a>, and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdprivate">\private</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdprotocol">\protocol &lt;name&gt; [&lt;header-file&gt;] [&lt;header-name&gt;]</h3>
+Indicates that a comment block contains documentation for a protocol in Objective-C with name &lt;name&gt;. 这些参数的意义与 \class 命令相同。
+
+<dl><dt><b>相关参考</b></dt><dd>小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdclass">\class</a>。</dd></dl>
+
+<hr>
+
+<h3 id="cmdpublic">\public</h3>
+Indicates that the member documented in the comment block is public, i.e., can be accessed by any other class or function.
+
+Note that Doxygen automatically detects the protection level of members in object-oriented languages. This command is intended for use only when the language does not support the concept of protection level natively (e.g. C, PHP 4).
+
+For starting a section of public members, in a way similar to the "public:" class marker in C++, use \publicsection.
+
+<dl><dt><b>相关参考</b></dt><dd>sections&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdmemberof">\memberof</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdprotected">\protected</a>&nbsp;and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdprivate">\private</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdrelates">\relates &lt;name&gt;</h3>
+This command can be used in the documentation of a non-member function &lt;name&gt;. It puts the function inside the `related function' section of the class documentation. This command is useful for documenting non-friend functions that are nevertheless strongly coupled to a certain class. It prevents the need of having to document a file, but only works for functions.
+
+<dl><dt><b>例如：</b></dt><dd>
+<div>
+<div>
+<div>/*! * A String class.
+*/</div>
+</div>
+</div>
+</dd></dl>class String
+{
+friend int strcmp(const String &amp;amp;,const String &amp;amp;);
+};
+
+/*! * Compares two strings.
+*/
+
+int strcmp(const String &amp;amp;s1,const String &amp;amp;s2)
+{
+}
+
+/*!\relates String
+* A string debug function.
+*/
+void stringDebug()
+{
+}
+
+点击<a href="http://www.doxygen.nl/examples/relates/html/class_string.html">这里</a>查看由doxygen生成的相应的文档。
+
+<hr>
+
+<h3 id="cmdrelatesalso">\relatesalso &lt;name&gt;</h3>
+This command can be used in the documentation of a non-member function &lt;name&gt;. It puts the function both inside the `related function' section of the class documentation as well as leaving its normal file documentation location. This command is useful for documenting non-friend functions that are nevertheless strongly coupled to a certain class. It only works for functions.
+
+<hr>
+
+<h3 id="cmdshowinitializer">\showinitializer</h3>
+By default the value of a define and the initializer of a variable are only displayed if they are less than 30 lines long. By putting this command in a comment block of a define or variable, the initializer is shown unconditionally.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdhideinitializer">\hideinitializer</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdstruct">\struct &lt;name&gt; [&lt;header-file&gt;] [&lt;header-name&gt;]</h3>
+Indicates that a comment block contains documentation for a struct with name &lt;name&gt;. 这些参数的意义与 \class 命令相同。
+
+<dl><dt><b>相关参考</b></dt><dd>小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdclass">\class</a>。</dd></dl>
+
+<hr>
+
+<h3 id="cmdtypedef">\typedef (typedef declaration)</h3>
+Indicates that a comment block contains documentation for a typedef (either global or as a member of a class). This command is equivalent to \var and \fn.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfn">\fn</a>&nbsp;and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdvar">\var</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdunion">\union &lt;name&gt; [&lt;header-file&gt;] [&lt;header-name&gt;]</h3>
+Indicates that a comment block contains documentation for a union with name &lt;name&gt;. 这些参数的意义与 \class 命令相同。
+
+<dl><dt><b>相关参考</b></dt><dd>小节&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdclass">\class</a>。</dd></dl>
+
+<hr>
+
+<h3 id="cmdvar">\var (variable declaration)</h3>
+Indicates that a comment block contains documentation for a variable or enum value (either global or as a member of a class). This command is equivalent to \typedef and \fn.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfn">\fn</a>&nbsp;and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdtypedef">\typedef</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdweakgroup">\weakgroup &lt;name&gt; [(title)]</h3>
+Can be used exactly like&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdaddtogroup">\addtogroup</a>, but has a lower priority when it comes to resolving conflicting grouping definitions.
+
+<dl><dt><b>相关参考</b></dt><dd>page&nbsp;<a href="http://www.doxygen.nl/grouping.html">Grouping</a>&nbsp;and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdaddtogroup">\addtogroup</a>.</dd></dl>
+
+<hr>
+
+<h2>--- Section indicators ---</h2>
+
+<hr>
+
+<h3 id="cmdattention">\attention { attention text }</h3>
+Starts a paragraph where a message that needs attention may be entered. The paragraph will be indented. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \attention commands will be joined into a single paragraph. The \attention command ends when a blank line or some other sectioning command is encountered.
+
+<hr>
+
+<h3 id="cmdauthor">\author { list of authors }</h3>
+Starts a paragraph where one or more author names may be entered. The paragraph will be indented. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \author commands will be joined into a single paragraph. Each author description will start a new line. Alternatively, one \author command may mention several authors. The \author command ends when a blank line or some other sectioning command is encountered.
+
+<dl><dt><b>例如：</b></dt><dd>
+<div>
+<div>
+<div>/*!\class WindowsNT
+* &nbsp;\brief Windows Nice Try.
+* &nbsp;\author Bill Gates
+* &nbsp;\author Several species of small furry animals gathered together
+* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;in a cave and grooving with a pict.
+* &nbsp;\version 4.0
+* &nbsp;\date &nbsp; &nbsp;1996-1998
+* &nbsp;\bug It crashes a lot and requires huge amounts of memory.
+* &nbsp;\bug The class introduces the more bugs, the longer it is used.
+* &nbsp;\warning This class may explode in your face.
+* &nbsp;\warning If you inherit anything from this class, you're doomed.
+*/</div>
+</div>
+</div>
+</dd></dl>class WindowsNT {};
+
+Click&nbsp;<a href="http://www.doxygen.nl/examples/author/html/class_windows_n_t.html">here</a>&nbsp;for the corresponding HTML documentation that is generated by doxygen.
+
+<hr>
+
+<h3 id="cmdbrief">\brief {brief description}</h3>
+Starts a paragraph that serves as a brief description. For classes and files the brief description will be used in lists and at the start of the documentation page. For class and file members, the brief description will be placed at the declaration of the member and prepended to the detailed description. A brief description may span several lines (although it is advised to keep it brief!). A brief description ends when a blank line or another sectioning command is encountered. If multiple \brief commands are present they will be joined. See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdauthor">\author</a>&nbsp;for an example.
+
+Synonymous to \short.
+
+<hr>
+
+<h3 id="cmdbug">\bug { bug description }</h3>
+Starts a paragraph where one or more bugs may be reported. The paragraph will be indented. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \bug commands will be joined into a single paragraph. Each bug description will start on a new line. Alternatively, one \bug command may mention several bugs. The \bug command ends when a blank line or some other sectioning command is encountered. See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdauthor">\author</a>&nbsp;for an example.
+
+<hr>
+
+<h3 id="cmdcond">\cond [&lt;section-label&gt;]</h3>
+Starts a conditional section that ends with a corresponding&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendcond">\endcond</a>&nbsp;command, which is typically found in another comment block. The main purpose of this pair of commands is to (conditionally) exclude part of a file from processing (in older version of doxygen this could only be achieved using C preprocessor commands).
+
+The section between \cond and \endcond commands can be included by adding its section label to the&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_enabled_sections">ENABLED_SECTIONS</a>&nbsp;configuration option. If the section label is omitted, the section will be excluded from processing unconditionally.
+
+For conditional sections within a comment block one should use a&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdif">\if</a>&nbsp;...&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendif">\endif</a>&nbsp;block.
+
+Conditional sections can be nested. In this case a nested section will only be shown if it and its containing section are included.
+
+Here is an example showing the commands in action:
+<div>
+<div>
+<div>/** An interface */
+class Intf
+{
+public:
+/** A method */
+virtual void func() = 0;</div>
+</div>
+</div>
+/// @cond TEST
+
+/** A method used for testing */
+virtual void test() = 0;
+
+/// @endcond
+};
+
+/// @cond DEV
+/*
+* &nbsp;The implementation of the interface
+*/
+class Implementation : public Intf
+{
+public:
+void func();
+
+/// @cond TEST
+void test();
+/// @endcond
+
+/// @cond
+/** This method is obsolete and does
+* &nbsp;not show up in the documentation.
+*/
+void obsolete();
+/// @endcond
+};
+
+/// @endcond
+
+The output will be different depending on whether or not&nbsp;<code>ENABLED_SECTIONS</code>&nbsp;contains&nbsp;<code>TEST</code>, or&nbsp;<code>DEV</code>
+
+<hr>
+
+<h3 id="cmddate">\date { date description }</h3>
+Starts a paragraph where one or more dates may be entered. The paragraph will be indented. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \date commands will be joined into a single paragraph. Each date description will start on a new line. Alternatively, one \date command may mention several dates. The \date command ends when a blank line or some other sectioning command is encountered. See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdauthor">\author</a>&nbsp;for an example.
+
+<hr>
+
+<h3 id="cmddeprecated">\deprecated { description }</h3>
+Starts a paragraph indicating that this documentation block belongs to a deprecated entity. Can be used to describe alternatives, expected life span, etc.
+
+<hr>
+
+<h3 id="cmddetails">\details {detailed decription}</h3>
+Just like&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdbrief">\brief</a>&nbsp;starts a brief description, \details starts the detailed description. You can also start a new paragraph (blank line) then the \details command is not needed.
+
+<hr>
+
+<h3 id="cmdelse">\else</h3>
+Starts a conditional section if the previous conditional section was not enabled. The previous section should have been started with a&nbsp;<code>\if</code>,&nbsp;<code>\ifnot</code>, or&nbsp;<code>\elseif</code>&nbsp;command.
+
+<dl><dt><b>相关参考</b></dt><dd><a href="http://zhanglongqi.com/archives/1109#cmdif">\if</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdifnot">\ifnot</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdelseif">\elseif</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendif">\endif.</a></dd></dl>
+
+<hr>
+
+<h3 id="cmdelseif">\elseif &lt;section-label&gt;</h3>
+Starts a conditional documentation section if the previous section was not enabled. A conditional section is disabled by default. To enable it you must put the section-label after the&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_enabled_sections">ENABLED_SECTIONS</a>&nbsp;tag in the configuration file. Conditional blocks can be nested. A nested section is only enabled if all enclosing sections are enabled as well.
+
+<dl><dt><b>相关参考</b></dt><dd>sections&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendif">\endif</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdifnot">\ifnot</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdelse">\else</a>, and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdelseif">\elseif</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdendcond">\endcond</h3>
+Ends a conditional section that was started by&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcond">\cond</a>.
+
+<dl><dt><b>相关参考</b></dt><dd><a href="http://zhanglongqi.com/archives/1109#cmdcond">\cond</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdendif">\endif</h3>
+Ends a conditional section that was started by&nbsp;<code>\if</code>&nbsp;or&nbsp;<code>\ifnot</code>&nbsp;For each&nbsp;<code>\if</code>&nbsp;or&nbsp;<code>\ifnot</code>&nbsp;one and only one matching&nbsp;<code>\endif</code>&nbsp;must follow.
+
+<dl><dt><b>相关参考</b></dt><dd><a href="http://zhanglongqi.com/archives/1109#cmdif">\if</a>, and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdifnot">\ifnot</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdexception">\exception &lt;exception-object&gt; { exception description }</h3>
+Starts an exception description for an exception object with name &lt;exception-object&gt;. Followed by a description of the exception. The existence of the exception object is not checked. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \exception commands will be joined into a single paragraph. Each parameter description will start on a new line. The \exception description ends when a blank line or some other sectioning command is encountered. See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfn">\fn</a>&nbsp;for an example.
+
+<dl><dt><b>注意：</b></dt><dd>the tag \exceptions is a synonym for this tag.</dd></dl>
+
+<hr>
+
+<h3 id="cmdif">\if &lt;section-label&gt;</h3>
+Starts a conditional documentation section. The section ends with a matching&nbsp;<code>\endif</code>&nbsp;command. A conditional section is disabled by default. To enable it you must put the section-label after the&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_enabled_sections">ENABLED_SECTIONS</a>&nbsp;tag in the configuration file. Conditional blocks can be nested. A nested section is only enabled if all enclosing sections are enabled as well.
+
+<dl><dt><b>例如：</b></dt><dd>
+<div>
+<div>/*!Unconditionally shown documentation.
+* &nbsp;\if Cond1
+* &nbsp; &nbsp;Only included if Cond1 is set.
+* &nbsp;\endif
+* &nbsp;\if Cond2
+* &nbsp; &nbsp;Only included if Cond2 is set.
+* &nbsp; &nbsp;\if Cond3
+* &nbsp; &nbsp; &nbsp;Only included if Cond2 and Cond3 are set.
+* &nbsp; &nbsp;\endif
+* &nbsp; &nbsp;More text.
+* &nbsp;\endif
+* &nbsp;Unconditional text.
+*/</div>
+</div>
+</dd></dl>You can also use conditional commands inside aliases. To document a class in two languages you could for instance use:
+
+<dl><dt><b>Example 2:</b></dt><dd>
+<div>
+<div>/*!\english
+* &nbsp;This is English.
+* &nbsp;\endenglish
+* &nbsp;\dutch
+* &nbsp;Dit is Nederlands.
+* &nbsp;\enddutch
+*/
+class Example
+{
+};</div>
+</div>
+</dd></dl>Where the following aliases are defined in the configuration file:
+<div>
+<div>
+<div>ALIASES &nbsp;= "english=\if english" \
+"endenglish=\endif" \
+"dutch=\if dutch" \
+"enddutch=\endif"</div>
+</div>
+</div>
+and&nbsp;<code>ENABLED_SECTIONS</code>&nbsp;can be used to enable either&nbsp;<code>english</code>&nbsp;or&nbsp;<code>dutch</code>.
+
+<dl><dt><b>相关参考</b></dt><dd>sections&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendif">\endif</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdifnot">\ifnot</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdelse">\else</a>, and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdelseif">\elseif</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdifnot">\ifnot &lt;section-label&gt;</h3>
+Starts a conditional documentation section. The section ends with a matching&nbsp;<code>\endif</code>&nbsp;command. This conditional section is enabled by default. To disable it you must put the section-label after the&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_enabled_sections">ENABLED_SECTIONS</a>&nbsp;tag in the configuration file.
+
+<dl><dt><b>相关参考</b></dt><dd>sections&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendif">\endif</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdif">\if</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdelse">\else</a>, and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdelseif">\elseif</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdinvariant">\invariant { description of invariant }</h3>
+Starts a paragraph where the invariant of an entity can be described. The paragraph will be indented. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \invariant commands will be joined into a single paragraph. Each invariant description will start on a new line. Alternatively, one \invariant command may mention several invariants. The \invariant command ends when a blank line or some other sectioning command is encountered.
+
+<hr>
+
+<h3 id="cmdnote">\note { text }</h3>
+Starts a paragraph where a note can be entered. The paragraph will be indented. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \note commands will be joined into a single paragraph. Each note description will start on a new line. Alternatively, one \note command may mention several notes. The \note command ends when a blank line or some other sectioning command is encountered. See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpar">\par</a>&nbsp;for an example.
+
+<hr>
+
+<h3 id="cmdpar">\par [(paragraph title)] { paragraph }</h3>
+If a paragraph title is given this command starts a paragraph with a user defined heading. The heading extends until the end of the line. The paragraph following the command will be indented.
+
+If no paragraph title is given this command will start a new paragraph. This will also work inside other paragraph commands (like \param or \warning) without ending the that command.
+
+The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. The \par command ends when a blank line or some other sectioning command is encountered.
+
+<dl><dt><b>例如：</b></dt><dd>
+<div>
+<div>
+<div>/*!\class Test
+* Normal text.
+*
+* \par User defined paragraph:
+* Contents of the paragraph.
+*
+* \par
+* New paragraph under the same heading.
+*
+* \note
+* This note consists of two paragraphs.
+* This is the first paragraph.
+*
+* \par
+* And this is the second paragraph.
+*
+* More normal text.
+*/</div>
+</div>
+</div>
+</dd></dl>class Test {};
+
+点击<a href="http://www.doxygen.nl/examples/par/html/class_test.html">这里</a>查看由doxygen生成的相应的文档。
+
+<hr>
+
+<h3 id="cmdparam">\param &lt;parameter-name&gt; { parameter description }</h3>
+Starts a parameter description for a function parameter with name &lt;parameter-name&gt;, followed by a description of the parameter. The existence of the parameter is checked and a warning is given if the documentation of this (or any other) parameter is missing or not present in the function declaration or definition.
+
+The \param command has an optional attribute specifying the direction of the attribute. Possible values are "in" and "out". Here is an example for the function memcpy:
+<div>
+<div>
+<div>
+
+&lt;span class="comment"&gt;/*!&lt;/span&gt;
+
+&lt;span class=
+"comment"&gt; Copies bytes from a source memory area to a destination memory area,&lt;/span&gt;
+&lt;span&gt; where both areas may not overlap.&lt;/span&gt;
+&lt;span class=
+"comment"&gt; @param[out] dest The memory area to copy to.&lt;/span&gt;
+&lt;span class=
+"comment"&gt; @param[in] &nbsp;src &nbsp;The memory area to copy from.&lt;/span&gt;
+&lt;span class=
+"comment"&gt; @param[in] &nbsp;n &nbsp; &nbsp;The number of bytes to copy&lt;/span&gt;
+&lt;span&gt; */&lt;/span&gt;
+
+&lt;span class="keywordtype"&gt;void&lt;/span&gt; memcpy(&lt;span class=
+"keywordtype"&gt;void&lt;/span&gt; *dest, &lt;span class=
+"keyword"&gt;const&lt;/span&gt; &lt;span class=
+"keywordtype"&gt;void&lt;/span&gt; *src, &lt;span class=
+"keywordtype"&gt;size_t&lt;/span&gt; n);
+
+</div>
+</div>
+</div>
+If a parameter is both input and output, use [in,out] as an attribute.
+
+The parameter description is a paragraph with no special internal structure. All visual enhancement commands may be used inside the paragraph.
+
+Multiple adjacent \param commands will be joined into a single paragraph. Each parameter description will start on a new line. The \param description ends when a blank line or some other sectioning command is encountered. See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfn">\fn</a>&nbsp;for an example.
+
+<hr>
+
+<h3 id="cmdtparam">\tparam &lt;template-parameter-name&gt; { description }</h3>
+Starts a template parameters for a class or function template parameter with name &lt;template-parameter-name&gt;, followed by a description of the template parameter.
+
+Otherwise similar to&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdparam">\cmdparam</a>.
+
+<hr>
+
+<h3 id="cmdpost">\post { description of the postcondition }</h3>
+Starts a paragraph where the postcondition of an entity can be described. The paragraph will be indented. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \post commands will be joined into a single paragraph. Each postcondition will start on a new line. Alternatively, one \post command may mention several postconditions. The \post command ends when a blank line or some other sectioning command is encountered.
+
+<hr>
+
+<h3 id="cmdpre">\pre { description of the precondition }</h3>
+Starts a paragraph where the precondition of an entity can be described. The paragraph will be indented. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \pre commands will be joined into a single paragraph. Each precondition will start on a new line. Alternatively, one \pre command may mention several preconditions. The \pre command ends when a blank line or some other sectioning command is encountered.
+
+<hr>
+
+<h3 id="cmdremarks">\remarks { remark text }</h3>
+Starts a paragraph where one or more remarks may be entered. The paragraph will be indented. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \remark commands will be joined into a single paragraph. Each remark will start on a new line. Alternatively, one \remark command may mention several remarks. The \remark command ends when a blank line or some other sectioning command is encountered.
+
+<hr>
+
+<h3 id="cmdreturn">\return { description of the return value }</h3>
+Starts a return value description for a function. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \return commands will be joined into a single paragraph. The \return description ends when a blank line or some other sectioning command is encountered. See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfn">\fn</a>&nbsp;for an example.
+
+<hr>
+
+<h3 id="cmdretval">\retval &lt;return value&gt; { description }</h3>
+Starts a return value description for a function with name &lt;return value&gt;. Followed by a description of the return value. The text of the paragraph that forms the description has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \retval commands will be joined into a single paragraph. Each return value description will start on a new line. The \retval description ends when a blank line or some other sectioning command is encountered.
+
+<hr>
+
+<h3 id="cmdsa">\sa { references }</h3>
+Starts a paragraph where one or more cross-references to classes, functions, methods, variables, files or URL may be specified. Two names joined by either&nbsp;<code>::</code>&nbsp;or&nbsp;<code>#</code>&nbsp;are understood as referring to a class and one of its members. One of several overloaded methods or constructors may be selected by including a parenthesized list of argument types after the method name.
+
+Synonymous to \see.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://cpp.ezbty.org/book/doxygen%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/autolink.html">autolink</a>&nbsp;for information on how to create links to objects.</dd></dl>
+
+<hr>
+
+<h3 id="cmdsee">\see { references }</h3>
+Equivalent to&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsa">\sa</a>. Introduced for compatibility with Javadoc.
+
+<hr>
+
+<h3 id="cmdsince">\since { text }</h3>
+This tag can be used to specify since when (version or time) an entity is available. The paragraph that follows \since does not have any special internal structure. All visual enhancement commands may be used inside the paragraph. The \since description ends when a blank line or some other sectioning command is encountered.
+
+<hr>
+
+<h3 id="cmdtest">\test { paragraph describing a test case }</h3>
+Starts a paragraph where a test case can be described. The description will also add the test case to a separate test list. The two instances of the description will be cross-referenced. Each test case in the test list will be preceded by a header that indicates the origin of the test case.
+
+<hr>
+
+<h3 id="cmdthrow">\throw &lt;exception-object&gt; { exception description }</h3>
+Synonymous to \exception (see section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdexception">\exception</a>).
+
+<dl><dt><b>注意：</b></dt><dd>the tag \throws is a synonym for this tag.</dd></dl>
+
+<hr>
+
+<h3 id="cmdtodo">\todo { paragraph describing what is to be done }</h3>
+Starts a paragraph where a TODO item is described. The description will also add an item to a separate TODO list. The two instances of the description will be cross-referenced. Each item in the TODO list will be preceded by a header that indicates the origin of the item.
+
+<hr>
+
+<h3 id="cmdversion">\version { version number }</h3>
+Starts a paragraph where one or more version strings may be entered. The paragraph will be indented. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \version commands will be joined into a single paragraph. Each version description will start on a new line. Alternatively, one \version command may mention several version strings. The \version command ends when a blank line or some other sectioning command is encountered. See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdauthor">\author</a>&nbsp;for an example.
+
+<hr>
+
+<h3 id="cmdwarning">\warning { warning message }</h3>
+Starts a paragraph where one or more warning messages may be entered. The paragraph will be indented. The text of the paragraph has no special internal structure. All visual enhancement commands may be used inside the paragraph. Multiple adjacent \warning commands will be joined into a single paragraph. Each warning description will start on a new line. Alternatively, one \warning command may mention several warnings. The \warning command ends when a blank line or some other sectioning command is encountered. See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdauthor">\author</a>&nbsp;for an example.
+
+<hr>
+
+<h3 id="cmdxrefitem">\xrefitem &lt;key&gt; "(heading)" "(list title)" {text}</h3>
+This command is a generalization of commands such as&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdtodo">\todo</a>&nbsp;and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdbug">\bug</a>. It can be used to create user-defined text sections which are automatically cross-referenced between the place of occurrence and a related page, which will be generated. On the related page all sections of the same type will be collected.
+
+The first argument &lt;key&gt; is a identifier uniquely representing the type of the section. The second argument is a quoted string representing the heading of the section under which text passed as the forth argument is put. The third argument (list title) is used as the title for the related page containing all items with the same key. The keys "todo", "test", "bug", and "deprecated" are predefined.
+
+To get an idea on how to use the \xrefitem command and what its effect is, consider the todo list, which (for English output) can be seen an alias for the command
+<div>
+<pre><code>\xrefitem todo "Todo" "Todo List" </code></pre>
+</div>
+Since it is very tedious and error-prone to repeat the first three parameters of the command for each section, the command is meant to be used in combination with the&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_aliases">ALIASES</a>&nbsp;option in the configuration file. To define a new command \reminder, for instance, one should add the following line to the configuration file:
+<div>
+<pre><code>ALIASES += "reminder=\xrefitem reminders \"Reminder\" \"Reminders\"" </code></pre>
+</div>
+Note the use of escaped quotes for the second and third argument of the \xrefitem command.
+
+<hr>
+
+<h2>--- Commands to create links ---</h2>
+
+<hr>
+
+<h3 id="cmdaddindex">\addindex (text)</h3>
+This command adds (text) to the&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">&nbsp;index.
+
+<hr>
+
+<h3 id="cmdanchor">\anchor &lt;word&gt;</h3>
+This command places an invisible, named anchor into the documentation to which you can refer with the \ref command.
+
+<dl><dt><b>注意：</b></dt><dd>Anchors can currently only be put into a comment block that is marked as a page (using&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpage">\page</a>) or mainpage (<a href="http://zhanglongqi.com/archives/1109#cmdmainpage">\mainpage</a>).</dd></dl><dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdref">\ref</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdendlink">\endlink</h3>
+This command ends a link that is started with the \link command.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdlink">\link</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdlink">\link &lt;link-object&gt;</h3>
+The links that are automatically generated by doxygen always have the name of the object they point to as link-text.
+
+The \link command can be used to create a link to an object (a file, class, or member) with a user specified link-text. The link command should end with an \endlink command. All text between the \link and \endlink commands serves as text for a link to the &lt;link-object&gt; specified as the first argument of \link.
+
+See section&nbsp;<a href="http://cpp.ezbty.org/book/doxygen%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/autolink.html">autolink</a>&nbsp;for more information on automatically generated links and valid link-objects.
+
+<hr>
+
+<h3 id="cmdref">\ref &lt;name&gt; ["(text)"]</h3>
+Creates a reference to a named section, subsection, page or anchor. For HTML documentation the reference command will generate a link to the section. For a sections or subsections the title of the section will be used as the text of the link. For anchor the optional text between quotes will be used or &lt;name&gt; if no text is specified. For&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">&nbsp;documentation the reference command will generate a section number for sections or the text followed by a page number if &lt;name&gt; refers to an anchor.
+
+<dl><dt><b>相关参考</b></dt><dd>Section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpage">\page</a>&nbsp;for an example of the \ref command.</dd></dl>
+
+<hr>
+
+<h3 id="cmdsubpage">\subpage &lt;name&gt; ["(text)"]</h3>
+This command can be used to create a hierarchy of pages. The same structure can be made using the&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddefgroup">\defgroup</a>&nbsp;and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdingroup">\ingroup</a>&nbsp;commands, but for pages the \subpage command is often more convenient. The main page (see&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdmainpage">\mainpage</a>) is typically the root of hierarchy.
+
+This command behaves similar as&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdref">\ref</a>&nbsp;in the sense that it creates a reference to a page labeled &lt;name&gt; with the optional link text as specified in the second argument.
+
+It differs from the \ref command in that it only works for pages, and creates a parent-child relation between pages, where the child page (or sub page) is identified by label &lt;name&gt;.
+
+See the&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsection">\section</a>&nbsp;and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsubsection">\subsection</a>&nbsp;commands if you want to add structure without creating multiple pages.
+
+<dl><dt><b>注意：</b></dt><dd>Each page can be the sub page of only one other page and no cyclic relations are allowed, i.e. the page hierarchy must have a tree structure.</dd></dl>这是一个示例：
+<div>
+<div>
+<div>
+
+/*!\mainpage A simple manual
+
+Some general info.
+
+This manual is divided in the following sections:
+- \subpage intro
+- \subpage advanced "Advanced usage"
+*/
+
+//-----------------------------------------------------------
+
+/*!\page intro Introduction
+This page introduces the user to the topic.
+Now you can proceed to the \ref advanced "advanced section".
+*/
+
+//-----------------------------------------------------------
+
+/*!\page advanced Advanced Usage
+This page is for advanced users.
+Make sure you have first read \ref intro "the introduction".
+*/
+
+</div>
+</div>
+</div>
+
+<hr>
+
+<h3 id="cmdsection">\section &lt;section-name&gt; (section title)</h3>
+Creates a section with name &lt;section-name&gt;. The title of the section should be specified as the second argument of the \section command.
+
+<dl><dt><b>警告：</b></dt><dd>This command only works inside related page documentation and&nbsp;<em>not</em>&nbsp;in other documentation blocks!</dd></dl>
+
+<hr>
+
+<h3 id="cmdsubsection">\subsection &lt;subsection-name&gt; (subsection title)</h3>
+Creates a subsection with name &lt;subsection-name&gt;. The title of the subsection should be specified as the second argument of the \subsection command.
+
+<dl><dt><b>警告：</b></dt><dd>This command only works inside a section of a related page documentation block and&nbsp;<em>not</em>&nbsp;in other documentation blocks!</dd></dl><dl><dt><b>相关参考</b></dt><dd>Section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpage">\page</a>&nbsp;for an example of the&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsubsection">\subsection</a>&nbsp;command.</dd></dl>
+
+<hr>
+
+<h3 id="cmdsubsubsection">\subsubsection &lt;subsubsection-name&gt; (subsubsection title)</h3>
+Creates a subsubsection with name &lt;subsubsection-name&gt;. The title of the subsubsection should be specified as the second argument of the \subsubsection command.
+
+<dl><dt><b>警告：</b></dt><dd>This command only works inside a subsection of a related page documentation block and&nbsp;<em>not</em>&nbsp;in other documentation blocks!</dd></dl><dl><dt><b>相关参考</b></dt><dd>Section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpage">\page</a>&nbsp;for an example of the&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdsubsubsection">\subsubsection</a>&nbsp;command.</dd></dl>
+
+<hr>
+
+<h3 id="cmdparagraph">\paragraph &lt;paragraph-name&gt; (paragraph title)</h3>
+Creates a named paragraph with name &lt;paragraph-name&gt;. The title of the paragraph should be specified as the second argument of the \paragraph command.
+
+<dl><dt><b>警告：</b></dt><dd>This command only works inside a subsubsection of a related page documentation block and&nbsp;<em>not</em>&nbsp;in other documentation blocks!</dd></dl><dl><dt><b>相关参考</b></dt><dd>Section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdpage">\page</a>&nbsp;for an example of the&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdparagraph">\paragraph</a>&nbsp;command.</dd></dl>
+
+<hr>
+
+<h2>--- Commands for displaying examples ---</h2>
+
+<hr>
+
+<h3 id="cmddontinclude">\dontinclude &lt;file-name&gt;</h3>
+This command can be used to parse a source file without actually verbatim including it in the documentation (as the \include command does). This is useful if you want to divide the source file into smaller pieces and add documentation between the pieces. Source files or directories can be specified using the&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_example_path">EXAMPLE_PATH</a>&nbsp;tag of doxygen's configuration file.
+
+The class and member declarations and definitions inside the code fragment are `remembered' during the parsing of the comment block that contained the \dontinclude command.
+
+For line by line descriptions of source files, one or more lines of the example can be displayed using the \line, \skip, \skipline, and \until commands. An internal pointer is used for these commands. The \dontinclude command sets the pointer to the first line of the example.
+
+<dl><dt><b>例如：</b></dt><dd>
+<div>
+<div>
+<div>
+
+/*!A test class. */
+
+class Test
+{
+public:
+/// a member function
+void example();
+};
+
+/*!\page example
+* &nbsp;\dontinclude example_test.cpp
+* &nbsp;Our main function starts like this:
+* &nbsp;\skip main
+* &nbsp;\until {
+* &nbsp;First we create a object \c t of the Test class.
+* &nbsp;\skipline Test
+* &nbsp;Then we call the example member function
+* &nbsp;\line example
+* &nbsp;After that our little test routine ends.
+* &nbsp;\line }
+*/
+
+</div>
+</div>
+</div>
+Where the example file&nbsp;<code>example_test.cpp</code>&nbsp;looks as follows:
+<div>
+<div>
+<div>void main()
+{
+Test t;
+t.example();
+}</div>
+</div>
+</div>
+点击<a href="http://www.doxygen.nl/examples/include/html/example.html">这里</a>查看由doxygen生成的相应的文档。
+
+</dd></dl><dl><dt><b>相关参考</b></dt><dd>sections&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdline">\line</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdskip">\skip</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdskipline">\skipline</a>, and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmduntil">\until</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdinclude">\include &lt;file-name&gt;</h3>
+This command can be used to include a source file as a block of code. The command takes the name of an include file as an argument. Source files or directories can be specified using the&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_example_path">EXAMPLE_PATH</a>&nbsp;tag of doxygen's configuration file.
+
+If &lt;file-name&gt; itself is not unique for the set of example files specified by the&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_example_path">EXAMPLE_PATH</a>&nbsp;tag, you can include part of the absolute path to disambiguate it.
+
+Using the \include command is equivalent to inserting the file into the documentation block and surrounding it with&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcode">\code</a>&nbsp;and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendcode">\endcode</a>&nbsp;commands.
+
+The main purpose of the \include command is to avoid code duplication in case of example blocks that consist of multiple source and header files.
+
+For a line by line description of a source files use the&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddontinclude">\dontinclude</a>&nbsp;command in combination with the&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdline">\line</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdskip">\skip</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdskipline">\skipline</a>, and \until commands.
+
+<dl><dt><b>注意：</b></dt><dd>Doxygen's special commands do not work inside blocks of code. It is allowed to nest C-style comments inside a code block though.</dd></dl><dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdexample">\example</a>,&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddontinclude">\dontinclude</a>, and section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdverbatim">\verbatim</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdincludelineno">\includelineno &lt;file-name&gt;</h3>
+This command works the same way as \include, but will add line numbers to the included file.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdinclude">\include</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdline">\line ( pattern )</h3>
+This command searches line by line through the example that was last included using \include or \dontinclude until it finds a non-blank line. If that line contains the specified pattern, it is written to the output.
+
+The internal pointer that is used to keep track of the current line in the example, is set to the start of the line following the non-blank line that was found (or to the end of the example if no such line could be found).
+
+See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddontinclude">\dontinclude</a>&nbsp;for an example.
+
+<hr>
+
+<h3 id="cmdskip">\skip ( pattern )</h3>
+This command searches line by line through the example that was last included using \include or \dontinclude until it finds a line that contains the specified pattern.
+
+The internal pointer that is used to keep track of the current line in the example, is set to the start of the line that contains the specified pattern (or to the end of the example if the pattern could not be found).
+
+See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddontinclude">\dontinclude</a>&nbsp;for an example.
+
+<hr>
+
+<h3 id="cmdskipline">\skipline ( pattern )</h3>
+This command searches line by line through the example that was last included using \include or \dontinclude until it finds a line that contains the specified pattern. It then writes the line to the output.
+
+The internal pointer that is used to keep track of the current line in the example, is set to the start of the line following the line that is written (or to the end of the example if the pattern could not be found).
+
+<dl><dt><b>注意：</b></dt><dd>The command:
+<div>
+<pre><code>\skipline pattern</code></pre>
+</div>
+is equivalent to:
+<div>
+<pre>\skip pattern
+\line pattern</pre>
+</div>
+</dd></dl>See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddontinclude">\dontinclude</a>&nbsp;for an example.
+
+<hr>
+
+<h3 id="cmduntil">\until ( pattern )</h3>
+This command writes all lines of the example that was last included using \include or \dontinclude to the output, until it finds a line containing the specified pattern. The line containing the pattern will be written as well.
+
+The internal pointer that is used to keep track of the current line in the example, is set to the start of the line following last written line (or to the end of the example if the pattern could not be found).
+
+See section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddontinclude">\dontinclude</a>&nbsp;for an example.
+
+<hr>
+
+<h3 id="cmdverbinclude">\verbinclude &lt;file-name&gt;</h3>
+This command includes the file &lt;file-name&gt; verbatim in the documentation. The command is equivalent to pasting the file in the documentation and placing \verbatim and \endverbatim commands around it.
+
+Files or directories that doxygen should look for can be specified using the&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_example_path">EXAMPLE_PATH</a>&nbsp;tag of doxygen's configuration file.
+
+<hr>
+
+<h3 id="cmdhtmlinclude">\htmlinclude &lt;file-name&gt;</h3>
+This command includes the file &lt;file-name&gt; as is in the HTML documentation. The command is equivalent to pasting the file in the documentation and placing \htmlonly and \endhtmlonly commands around it.
+
+Files or directories that doxygen should look for can be specified using the&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_example_path">EXAMPLE_PATH</a>&nbsp;tag of doxygen's configuration file.
+
+<hr>
+
+<h2>--- Commands for visual enhancements ---</h2>
+<h2><a id="cmda"></a>\a &lt;word&gt;</h2>
+Displays the argument &lt;word&gt; using a special font. Use this command to refer to member arguments in the running text.
+
+<dl><dt><b>例如：</b></dt><dd>
+<div>
+<div>
+<div>... the \a x and \a y coordinates are used to ...</div>
+</div>
+</div>
+This will result in the following text:
+
+... the&nbsp;<em>x</em>&nbsp;and&nbsp;<em>y</em>&nbsp;coordinates are used to ...
+
+</dd></dl>
+
+<hr>
+
+<h3 id="cmdarg">\arg { item-description }</h3>
+This command has one argument that continues until the first blank line or until another \arg is encountered. The command can be used to generate a simple, not nested list of arguments. Each argument should start with a \arg command.
+
+<dl><dt><b>例如：</b></dt><dd>Typing:
+<div>
+<div>
+<div>\arg \c AlignLeft left alignment.
+\arg \c AlignCenter center alignment.
+\arg \c AlignRight right alignment</div>
+</div>
+</div>
+</dd></dl>No other types of alignment are supported.
+
+will result in the following text:
+<ul>
+	<li><code>AlignLeft</code>&nbsp;left alignment.</li>
+	<li><code>AlignCenter</code>&nbsp;center alignment.</li>
+	<li><code>AlignRight</code>&nbsp;right alignment</li>
+</ul>
+No other types of alignment are supported.
+
+<dl><dt><b>注意：</b></dt><dd>For nested lists, HTML commands should be used.</dd></dl>Equivalent to&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdli">\li</a>
+
+<hr>
+
+<h3 id="cmdb">\b &lt;word&gt;</h3>
+Displays the argument &lt;word&gt; using a bold font. Equivalent to &lt;b&gt;word&lt;/b&gt;. To put multiple words in bold use &lt;b&gt;multiple words&lt;/b&gt;.
+
+<hr>
+
+<h3 id="cmdc">\c &lt;word&gt;</h3>
+Displays the argument &lt;word&gt; using a typewriter font. Use this to refer to a word of code. Equivalent to &lt;tt&gt;word&lt;/tt&gt;.
+
+<dl><dt><b>例如：</b></dt><dd>Typing:
+<div>
+<div>
+<div>... This function returns \c void and not \c int ...</div>
+</div>
+</div>
+will result in the following text:
+
+... This function returns&nbsp;<code>void</code>&nbsp;and not&nbsp;<code>int</code>&nbsp;...
+
+</dd></dl>Equivalent to&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdp">\p</a>&nbsp;To have multiple words in typewriter font use &lt;tt&gt;multiple words&lt;/tt&gt;.
+
+<hr>
+
+<h3 id="cmdcode">\code</h3>
+Starts a block of code. A code block is treated differently from ordinary text. It is interpreted as C/C++ code. The names of the classes and members that are documented are automatically replaced by links to the documentation.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendcode">\endcode</a>, section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdverbatim">\verbatim</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdcopydoc">\copydoc &lt;link-object&gt;</h3>
+Copies a documentation block from the object specified by &lt;link-object&gt; and pastes it at the location of the command. This command can be useful to avoid cases where a documentation block would otherwise have to be duplicated or it can be used to extend the documentation of an inherited member.
+
+The link object can point to a member (of a class, file or group), a class, a namespace, a group, a page, or a file (checked in that order). Note that if the object pointed to is a member (function, variable, typedef, etc), the compound (class, file, or group) containing it should also be documented for the copying to work.
+
+To copy the documentation for a member of a class for instance one can put the following in the documentation
+<div>
+<div>
+<div>/*!@copydoc MyClass::myfunction()
+* &nbsp;More documentation.
+*/</div>
+</div>
+</div>
+if the member is overloaded, you should specify the argument types explicitly (without spaces!), like in the following:
+<div>
+<div>
+<div>/*!@copydoc MyClass::myfunction(type1,type2) */</div>
+</div>
+</div>
+Qualified names are only needed if the context in which the documentation block is found requires them.
+
+The copydoc command can be used recursively, but cycles in the copydoc relation will be broken and flagged as an error.
+
+Note that both the brief description and the detailed documentation will be copied. See&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcopybrief">\cmdcopybrief</a>&nbsp;and&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcopydetails">\cmdcopydetails</a>&nbsp;for copying only the brief or detailed part of the comment block.
+
+<hr>
+
+<h3 id="cmdcopybrief">\copybrief &lt;link-object&gt;</h3>
+Works in a similar way as&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcopydoc">\copydoc</a>&nbsp;but will only copy the brief description, not the detailed documentation.
+
+<hr>
+
+<h3 id="cmdcopydetails">\copydetails &lt;link-object&gt;</h3>
+Works in a similar way as&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcopydoc">\copydoc</a>&nbsp;but will only copy the detailed documentation, not the brief description.
+
+<hr>
+
+<h3 id="cmddot">\dot</h3>
+Starts a text fragment which should contain a valid description of a dot graph. The text fragment ends with&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdenddot">\enddot</a>. Doxygen will pass the text on to dot and include the resulting image (and image map) into the output. The nodes of a graph can be made clickable by using the URL attribute. By using the command \ref inside the URL value you can conveniently link to an item inside doxygen. 这是一个示例：
+<div>
+<div>
+<div>&lt;span class="comment"&gt;/*!class B */&lt;/span&gt;
+&lt;span class="keyword"&gt;class &lt;/span&gt;B {};</div>
+</div>
+</div>
+&lt;span class="comment"&gt;/*!class C */&lt;/span&gt;
+
+&lt;span class="keyword"&gt;class &lt;/span&gt;C {};
+
+&lt;span class="comment"&gt;/*!\mainpage&lt;/span&gt;
+
+&lt;span class=
+"comment"&gt; &nbsp;Class relations expressed via an inline dot graph:&lt;/span&gt;
+&lt;span&gt; &nbsp;\dot&lt;/span&gt;
+&lt;span&gt; &nbsp;digraph example {&lt;/span&gt;
+&lt;span class=
+"comment"&gt; &nbsp; &nbsp; &nbsp;node [shape=record, fontname=Helvetica, fontsize=10];&lt;/span&gt;
+
+&lt;span class=
+"comment"&gt; &nbsp; &nbsp; &nbsp;b [ label="class B" URL="\ref B"];&lt;/span&gt;
+&lt;span class=
+"comment"&gt; &nbsp; &nbsp; &nbsp;c [ label="class C" URL="\ref C"];&lt;/span&gt;
+&lt;span class=
+"comment"&gt; &nbsp; &nbsp; &nbsp;b -&amp;gt; c [ arrowhead="open", style="dashed" ];&lt;/span&gt;
+&lt;span&gt; &nbsp;}&lt;/span&gt;
+&lt;span&gt; &nbsp;\enddot&lt;/span&gt;
+
+&lt;span class=
+"comment"&gt; &nbsp;Note that the classes in the above graph are clickable &lt;/span&gt;
+&lt;span&gt; &nbsp;(in the HTML output).&lt;/span&gt;
+&lt;span&gt; */&lt;/span&gt;
+
+<hr>
+
+<h3 id="cmdmsc">\msc</h3>
+Starts a text fragment which should contain a valid description of a message sequence chart. See&nbsp;<a href="http://www.mcternan.me.uk/mscgen/">http://www.mcternan.me.uk/mscgen/</a>&nbsp;for examples. The text fragment ends with&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendmsc">\endmsc</a>.
+
+<dl><dt><b>注意：</b></dt><dd>The text fragment should only include the part of the message sequence chart that is within the&nbsp;<code>msc&nbsp;{...}</code>&nbsp;block.</dd><dd>You need to install the&nbsp;<code>mscgen</code>&nbsp;tool, if you want to use this command.</dd></dl>Here is an example of the use of the \msc command.
+<div>
+<div>
+<div>&lt;span class=
+"comment"&gt;/** Sender class. Can be used to send a command to the server.&lt;/span&gt;
+&lt;span class=
+"comment"&gt; &nbsp;The receiver will acknowlegde the command by calling Ack().&lt;/span&gt;</div>
+</div>
+</div>
+&lt;span&gt; &nbsp;\msc&lt;/span&gt;
+&lt;span&gt; &nbsp; &nbsp;Sender,Receiver;&lt;/span&gt;
+&lt;span class=
+"comment"&gt; &nbsp; &nbsp;Sender-&amp;gt;Receiver [label="Command()", URL="\ref Receiver::Command()"];&lt;/span&gt;
+&lt;span class=
+"comment"&gt; &nbsp; &nbsp;Sender&amp;lt;-Receiver [label="Ack()", URL="\ref Ack()", ID="1"];&lt;/span&gt;
+&lt;span&gt; &nbsp;\endmsc&lt;/span&gt;
+
+&lt;span&gt; */&lt;/span&gt;
+&lt;span class="keyword"&gt;class &lt;/span&gt;Sender
+{
+&lt;span class="keyword"&gt;public&lt;/span&gt;:
+&lt;span class="comment"&gt; &nbsp; &nbsp;/** Acknowledgement from server */&lt;/span&gt;
+&lt;span class="keywordtype"&gt;void&lt;/span&gt; Ack(&lt;span class=
+"keywordtype"&gt;bool&lt;/span&gt; ok);
+};
+
+&lt;span class=
+"comment"&gt;/** Receiver class. Can be used to receive and execute commands.&lt;/span&gt;
+&lt;span class=
+"comment"&gt; &nbsp;After execution of a command, the receiver will send an acknowledgement&lt;/span&gt;
+&lt;span&gt; &nbsp;\msc&lt;/span&gt;
+&lt;span&gt; &nbsp; &nbsp;Receiver,Sender;&lt;/span&gt;
+&lt;span class=
+"comment"&gt; &nbsp; &nbsp;Receiver&amp;lt;-Sender [label="Command()", URL="\ref Command()"];&lt;/span&gt;
+&lt;span class=
+"comment"&gt; &nbsp; &nbsp;Receiver-&amp;gt;Sender [label="Ack()", URL="\ref Sender::Ack()", ID="1"];&lt;/span&gt;
+
+&lt;span&gt; &nbsp;\endmsc&lt;/span&gt;
+&lt;span&gt; */&lt;/span&gt;
+&lt;span class="keyword"&gt;class &lt;/span&gt;Receiver
+{
+&lt;span class="keyword"&gt;public&lt;/span&gt;:
+&lt;span class=
+"comment"&gt; &nbsp; &nbsp;/** Executable a command on the server */&lt;/span&gt;
+&lt;span class="keywordtype"&gt;void&lt;/span&gt; Command(&lt;span class=
+"keywordtype"&gt;int&lt;/span&gt; commandId);
+};
+
+<hr>
+
+<h3 id="cmddotfile">\dotfile &lt;file&gt; ["caption"]</h3>
+Inserts an image generated by dot from &lt;file&gt; into the documentation.
+
+The first argument specifies the file name of the image. doxygen will look for files in the paths (or files) that you specified after the&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_dotfile_dirs">DOTFILE_DIRS</a>&nbsp;tag. If the dot file is found it will be used as an input file to the dot tool. The resulting image will be put into the correct output directory. If the dot file name contains spaces you'll have to put quotes ("...") around it.
+
+The second argument is optional and can be used to specify the caption that is displayed below the image. This argument has to be specified between quotes even if it does not contain any spaces. The quotes are stripped before the caption is displayed.
+
+<hr>
+
+<h3 id="cmde">\e &lt;word&gt;</h3>
+Displays the argument &lt;word&gt; in italics. Use this command to emphasize words.
+
+<dl><dt><b>例如：</b></dt><dd>Typing:
+<div>
+<div>
+<div>... this is a \e really good example ...</div>
+</div>
+</div>
+will result in the following text:
+
+... this is a&nbsp;<em>really</em>&nbsp;good example ...
+
+</dd></dl>Equivalent to&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdem">\em</a>. To emphasis multiple words use &lt;em&gt;multiple words&lt;/em&gt;.
+
+<hr>
+
+<h3 id="cmdem">\em &lt;word&gt;</h3>
+Displays the argument &lt;word&gt; in italics. Use this command to emphasize words.
+
+<dl><dt><b>例如：</b></dt><dd>Typing:
+<div>
+<div>
+<div>... this is a \em really good example ...</div>
+</div>
+</div>
+will result in the following text:
+
+... this is a&nbsp;<em>really</em>&nbsp;good example ...
+
+</dd></dl>Equivalent to&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmde">\e</a>
+
+<hr>
+
+<h3 id="cmdendcode">\endcode</h3>
+Ends a block of code.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcode">\code</a></dd></dl>
+
+<hr>
+
+<h3 id="cmdenddot">\enddot</h3>
+Ends a blocks that was started with&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmddot">\dot</a>.
+
+<hr>
+
+<h3 id="cmdendmsc">\endmsc</h3>
+Ends a blocks that was started with&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdmsc">\msc</a>.
+
+<hr>
+
+<h3 id="cmdendhtmlonly">\endhtmlonly</h3>
+Ends a block of text that was started with a \htmlonly command.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdhtmlonly">\htmlonly</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdendlatexonly">\endlatexonly</h3>
+Ends a block of text that was started with a \latexonly command.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdlatexonly">\latexonly</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdendmanonly">\endmanonly</h3>
+Ends a block of text that was started with a \manonly command.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdmanonly">\manonly</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdendverbatim">\endverbatim</h3>
+Ends a block of text that was started with a \verbatim command.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdendcode">\endcode</a>, section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdverbatim">\verbatim</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdendxmlonly">\endxmlonly</h3>
+Ends a block of text that was started with a \xmlonly command.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdxmlonly">\xmlonly</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdfdollar">\f$</h3>
+Marks the start and end of an in-text formula.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://cpp.ezbty.org/book/doxygen%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/formulas.html">formulas</a>&nbsp;for an example.</dd></dl>
+
+<hr>
+
+<h3 id="cmdfbropen">\f[</h3>
+Marks the start of a long formula that is displayed centered on a separate line.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfbrclose">\f]</a>&nbsp;and section&nbsp;<a href="http://cpp.ezbty.org/book/doxygen%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/formulas.html">formulas</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdfbrclose">\f]</h3>
+Marks the end of a long formula that is displayed centered on a separate line.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdfbropen">\f[</a>&nbsp;and section&nbsp;<a href="http://cpp.ezbty.org/book/doxygen%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/formulas.html">formulas</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdfcurlyopen">\f{environment}{</h3>
+Marks the start of a formula that is in a specific environment.
+
+<dl><dt><b>注意：</b></dt><dd>The second is optional and is only to help editors (such as Vim) to do proper syntax highlighting by making the number of opening and closing braces the same.</dd></dl>
+
+<hr>
+
+<h3 id="cmdfcurlyclose">\f}</h3>
+Marks the end of a formula that is in a specific environment.
+
+<hr>
+
+<h3 id="cmdhtmlonly">\htmlonly</h3>
+Starts a block of text that will be verbatim included in the generated HTML documentation only. The block ends with a endhtmlonly command.
+
+This command can be used to include HTML code that is too complex for doxygen (i.e. applets, java-scripts, and HTML tags that require attributes). You can use the \latexonly and \endlatexonly pair to provide a proper&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">&nbsp;alternative.
+
+<b>Note:</b>&nbsp;environment variables (like $(HOME) ) are resolved inside a HTML-only block.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdmanonly">\manonly</a>&nbsp;and section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdlatexonly">\latexonly</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdimage">\image &lt;format&gt; &lt;file&gt; ["caption"] [&lt;sizeindication&gt;=&lt;size&gt;]</h3>
+Inserts an image into the documentation. This command is format specific, so if you want to insert an image for more than one format you'll have to repeat this command for each format.
+
+The first argument specifies the output format. Currently, the following values are supported:&nbsp;<code>html</code>&nbsp;and&nbsp;<code>latex</code>.
+
+The second argument specifies the file name of the image. doxygen will look for files in the paths (or files) that you specified after the&nbsp;<a href="http://www.doxygen.nl/config.html#cfg_image_path">IMAGE_PATH</a>&nbsp;tag. If the image is found it will be copied to the correct output directory. If the image name contains spaces you'll have to put quotes ("...") around it. You can also specify an absolute URL instead of a file name, but then doxygen does not copy the image nor check its existance.
+
+The third argument is optional and can be used to specify the caption that is displayed below the image. This argument has to be specified on a single line and between quotes even if it does not contain any spaces. The quotes are stripped before the caption is displayed.
+
+The fourth argument is also optional and can be used to specify the width or height of the image. This is only useful for&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">&nbsp;output (i.e. format=<code>latex</code>). The&nbsp;<code>sizeindication</code>&nbsp;can be either&nbsp;<code>width</code>&nbsp;or&nbsp;<code>height</code>. The size should be a valid size specifier in&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">&nbsp;(for example&nbsp;<code>10cm</code>&nbsp;or&nbsp;<code>6in</code>&nbsp;or a symbolic width like&nbsp;<code>\textwidth</code>).
+
+Here is example of a comment block:
+<div>
+<div>
+<div>/*!Here is a snapshot of my new application:
+* &nbsp;\image html application.jpg
+* &nbsp;\image latex application.eps "My application" width=10cm
+*/</div>
+</div>
+</div>
+And this is an example of how the relevant part of the configuration file may look:
+<div>
+<div>
+<div>IMAGE_PATH &nbsp; &nbsp; = my_image_dir</div>
+</div>
+</div>
+<dl><dt><b>警告：</b></dt><dd>The image format for HTML is limited to what your browser supports. For&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">, the image format must be Encapsulated PostScript (eps).Doxygen does not check if the image is in the correct format. So&nbsp;<em>you</em>&nbsp;have to make sure this is the case!</dd></dl>
+
+<hr>
+
+<h3 id="cmdlatexonly">\latexonly</h3>
+Starts a block of text that will be verbatim included in the generated&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">&nbsp;documentation only. The block ends with a endlatexonly command.
+
+This command can be used to include&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">&nbsp;code that is too complex for doxygen (i.e. images, formulas, special characters). You can use the \htmlonly and \endhtmlonly pair to provide a proper HTML alternative.
+
+<b>Note:</b>&nbsp;environment variables (like $(HOME) ) are resolved inside a&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">-only block.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdlatexonly">\latexonly</a>&nbsp;and section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdhtmlonly">\htmlonly</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdmanonly">\manonly</h3>
+Starts a block of text that will be verbatim included in the generated MAN documentation only. The block ends with a endmanonly command.
+
+This command can be used to include groff code directly into MAN pages. You can use the \htmlonly and \latexonly and \endhtmlonly and \endlatexonly pairs to provide proper HTML and&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">&nbsp;alternatives.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdhtmlonly">\htmlonly</a>&nbsp;and section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdlatexonly">\latexonly</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdli">\li { item-description }</h3>
+This command has one argument that continues until the first blank line or until another \li is encountered. The command can be used to generate a simple, not nested list of arguments. Each argument should start with a \li command.
+
+<dl><dt><b>例如：</b></dt><dd>Typing:
+<div>
+<div>
+<div>\li \c AlignLeft left alignment.
+\li \c AlignCenter center alignment.
+\li \c AlignRight right alignment</div>
+</div>
+</div>
+</dd></dl>No other types of alignment are supported.
+
+will result in the following text:
+<ul>
+	<li><code>AlignLeft</code>&nbsp;left alignment.</li>
+	<li><code>AlignCenter</code>&nbsp;center alignment.</li>
+	<li><code>AlignRight</code>&nbsp;right alignment</li>
+</ul>
+No other types of alignment are supported.
+
+<dl><dt><b>注意：</b></dt><dd>For nested lists, HTML commands should be used.</dd></dl>Equivalent to&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdarg">\arg</a>
+
+<hr>
+
+<h3 id="cmdn">\n</h3>
+Forces a new line. Equivalent to &lt;br&gt; and inspired by the printf function.
+
+<hr>
+
+<h3 id="cmdp">\p &lt;word&gt;</h3>
+Displays the parameter &lt;word&gt; using a typewriter font. You can use this command to refer to member function parameters in the running text.
+
+<dl><dt><b>例如：</b></dt><dd>
+<div>
+<div>
+<div>... the \p x and \p y coordinates are used to ...</div>
+</div>
+</div>
+This will result in the following text:
+
+... the&nbsp;<code>x</code>&nbsp;and&nbsp;<code>y</code>&nbsp;coordinates are used to ...
+
+</dd></dl>Equivalent to&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdc">\c</a>
+
+<hr>
+
+<h3 id="cmdverbatim">\verbatim</h3>
+Starts a block of text that will be verbatim included in both the HTML and the&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">&nbsp;documentation. The block should end with a \endverbatim block. All commands are disabled in a verbatim block.
+
+<dl><dt><b>警告：</b></dt><dd>Make sure you include a \endverbatim command for each \verbatim command or the parser will get confused!</dd></dl><dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdcode">\code</a>, and section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdverbinclude">\verbinclude</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdxmlonly">\xmlonly</h3>
+Starts a block of text that will be verbatim included in the generated XML output only. The block ends with a endxmlonly command.
+
+This command can be used to include custom XML tags.
+
+<dl><dt><b>相关参考</b></dt><dd>section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdhtmlonly">\htmlonly</a>&nbsp;and section&nbsp;<a href="http://zhanglongqi.com/archives/1109#cmdlatexonly">\latexonly</a>.</dd></dl>
+
+<hr>
+
+<h3 id="cmdbackslash">\\</h3>
+This command writes a backslash character (\) to the HTML and&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">&nbsp;output. The backslash has to be escaped in some cases because doxygen uses it to detect commands.
+
+<hr>
+
+<h3 id="cmdat">\@</h3>
+This command writes an at-sign (@) to the HTML and&nbsp;<img alt="$\mbox{\LaTeX}$" src="http://zhanglongqi.com/wp-content/uploads/2013/08/34dac3ef53743d20b2b8bbbc09ffc044.png" style="display: none !important;">&nbsp;output. The at-sign has to be escaped in some cases because doxygen uses it to detect JavaDoc commands.
+
+<hr>
+
+<h3 id="cmdtilde">\~[LanguageId]</h3>
+This command enables/disables a language specific filter. This can be used to put documentation for different language into one comment block and use the&nbsp;<code>OUTPUT_LANGUAGE</code>&nbsp;tag to filter out only a specific language. Use \~language_id to enable output for a specific language only and \~ to enable output for all languages (this is also the default mode).
+
+例如：
+<div>
+<div>
+<div>/*!\~english This is english \~dutch Dit is Nederlands \~german Dieses ist
+deutsch. \~ output for all languages.
+*/</div>
+</div>
+</div>
+
+<hr>
+
+<h3 id="cmdamp">\&amp;</h3>
+This command writes the &amp; character to output. This character has to be escaped because it has a special meaning in HTML.
+
+<hr>
+
+<h3 id="cmddollar">\$</h3>
+This command writes the $ character to the output. This character has to be escaped in some cases, because it is used to expand environment variables.
+
+<hr>
+
+<h3 id="cmdhash">\#</h3>
+This command writes the # character to the output. This character has to be escaped in some cases, because it is used to refer to documented entities.
+
+<hr>
+
+<h3 id="cmdlt">\&lt;</h3>
+This command writes the &lt; character to the output. This character has to be escaped because it has a special meaning in HTML.
+
+<hr>
+
+<h3 id="cmdgt">\&gt;</h3>
+This command writes the &gt; character to the output. This character has to be escaped because it has a special meaning in HTML.
+
+<hr>
+
+<h3 id="cmdperc">\%</h3>
+This command writes the % character to the output. This character has to be escaped in some cases, because it is used to prevent auto-linking to word that is also a documented class or struct.
+
+<hr>
+
+<h3 id="cmdquot">\"</h3>
+This command writes the " character to the output. This character has to be escaped in some cases, because it is used in pairs to indicate an unformated text fragment.
+
+<hr>
+
+<h2>--- Commands included for Qt compatibility ---</h2>
+The following commands are supported to remain compatible to the Qt class browser generator. Do&nbsp;<em>not</em>&nbsp;use these commands in your own documentation.
+<ul>
+	<li>\annotatedclasslist</li>
+	<li>\classhierarchy</li>
+	<li>\define</li>
+	<li>\functionindex</li>
+	<li>\header</li>
+	<li>\headerfilelist</li>
+	<li>\inherit</li>
+	<li>\l</li>
+	<li>\postheader</li>
+</ul>
+原作者 &nbsp;<a href="http://cpp.ezbty.org/book/doxygen%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/doxygen%E7%9A%84%E7%89%B9%E5%AE%9A%E5%91%BD%E4%BB%A4" target="_blank">lgb</a></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(3302114,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;b303f7d0-794d-e011-a53f-842b2b196315&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./doxygen的特定命令 - benhuan - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./doxygen的特定命令 - benhuan - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/benhuan/" target="_blank"><img src="./doxygen的特定命令 - benhuan - 博客园_files/sample_face.gif" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/benhuan/">benhuan</a><br>
+            <a href="http://home.cnblogs.com/u/benhuan/followees">关注 - 1</a><br>
+            <a href="http://home.cnblogs.com/u/benhuan/followers">粉丝 - 1</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;b303f7d0-794d-e011-a53f-842b2b196315&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(3302114,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(3302114,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/benhuan/p/3302113.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/benhuan/p/3302113.html" title="发布于2013-07-23 15:23">如何看懂源代码--(分析源代码方法)</a><br><a href="http://www.cnblogs.com/benhuan/p/3302115.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/benhuan/p/3302115.html" title="发布于2013-08-05 12:10">longene QQ2013 浏览器调用修复</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2013-08-04 23:00</span> <a href="http://www.cnblogs.com/benhuan/">benhuan</a> 阅读(<span id="post_view_count">337</span>) 评论(<span id="post_comment_count">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=3302114" rel="nofollow">编辑</a> <a href="https://www.cnblogs.com/benhuan/p/3302114.html#" onclick="AddToWz(3302114);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=132051,cb_entryId=3302114,cb_blogApp=currentBlogApp,cb_blogUserGuid='b303f7d0-794d-e011-a53f-842b2b196315',cb_entryCreatedDate='2013/8/4 23:00:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/benhuan/p/3302114.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/benhuan/p/3302114.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="https://news.cnblogs.com/n/588909/" target="_blank">Alphabet去年营收首破千亿美元 同比增22%</a><br> ·  <a href="https://news.cnblogs.com/n/588903/" target="_blank">中国联通：根据公司实际经营情况，注册地拟从上海变更为北京</a><br> ·  <a href="https://news.cnblogs.com/n/588904/" target="_blank">亚马逊第四季度净利润19亿美元 同比增长153.7%</a><br> ·  <a href="https://news.cnblogs.com/n/588912/" target="_blank">财报表现出色广告收入上涨 Facebook股价创新高</a><br> ·  <a href="https://news.cnblogs.com/n/588916/" target="_blank">苹果现有2850亿美元现金，高管说要全花光，怎么花？</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c2" class="c_ad_block"></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/586236/" target="_blank">领域驱动设计在互联网业务开发中的实践</a><br> ·  <a href="http://kb.cnblogs.com/page/585502/" target="_blank">步入云计算</a><br> ·  <a href="http://kb.cnblogs.com/page/531409/" target="_blank">以操作系统的角度述说线程与进程</a><br> ·  <a href="http://kb.cnblogs.com/page/141729/" target="_blank">软件测试转型之路</a><br> ·  <a href="http://kb.cnblogs.com/page/177402/" target="_blank">门内门外看招聘</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><div id="profile_block">昵称：<a href="https://home.cnblogs.com/u/benhuan/">benhuan</a><br>园龄：<a href="https://home.cnblogs.com/u/benhuan/" title="入园时间：2011-03-13">6年10个月</a><br>粉丝：<a href="https://home.cnblogs.com/u/benhuan/followers/">1</a><br>关注：<a href="https://home.cnblogs.com/u/benhuan/followees/">1</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;b303f7d0-794d-e011-a53f-842b2b196315&#39;)">+加关注</a></div><script>getFollowStatus('b303f7d0-794d-e011-a53f-842b2b196315')</script></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2018/01/01&#39;);return false;">&lt;</a></td><td align="center">2018年2月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2018/03/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td align="center">1</td><td class="CalTodayDay" align="center">2</td><td class="CalWeekendDay" align="center">3</td></tr><tr><td class="CalWeekendDay" align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td class="CalWeekendDay" align="center">10</td></tr><tr><td class="CalWeekendDay" align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td><td align="center">16</td><td class="CalWeekendDay" align="center">17</td></tr><tr><td class="CalWeekendDay" align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td class="CalWeekendDay" align="center">24</td></tr><tr><td class="CalWeekendDay" align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td></tr><tr><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td><td class="CalOtherMonthDay" align="center">8</td><td class="CalOtherMonthDay" align="center">9</td><td class="CalOtherMonthDay" align="center">10</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/benhuan/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/benhuan/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/benhuan/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/benhuan/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/benhuan/tag/" title="我的博客的标签列表">我的标签</a></li>
+<li><a id="itemListLink" onclick="this.blur();WarpClass(&#39;itemListLink&#39;, &#39;itemListLin_con&#39;);return false;" href="https://www.cnblogs.com/benhuan/p/3302114.html#">更多链接</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/benhuan/tag/test/">test</a>(1)</li><li><a href="http://www.cnblogs.com/benhuan/tag/%E6%B5%8B%E8%AF%95/">测试</a>(1)</li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div class="catListPostCategory">
+<h3 class="catListTitle">随笔分类</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/benhuan/category/424117.html">Algorithm</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/benhuan/category/424115.html">C/C++</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/benhuan/category/424110.html">Linux(2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/benhuan/category/424114.html">program</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/benhuan/category/424111.html">Shell(2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/benhuan/category/424113.html">story</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/benhuan/category/424112.html">Windows</a> </li>
+
+</ul>
+
+</div>
+
+<div class="catListPostArchive">
+<h3 class="catListTitle">随笔档案</h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/benhuan/archive/2013/08.html">2013年8月 (7)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/benhuan/archive/2013/07.html">2013年7月 (9)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/benhuan/archive/2013/06.html">2013年6月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/benhuan/archive/2013/04.html">2013年4月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/benhuan/archive/2013/03.html">2013年3月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/benhuan/archive/2013/01.html">2013年1月 (9)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_6" href="http://www.cnblogs.com/benhuan/archive/2012/12.html">2012年12月 (13)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_7" href="http://www.cnblogs.com/benhuan/archive/2012/11.html">2012年11月 (36)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_8" href="http://www.cnblogs.com/benhuan/archive/2012/10.html">2012年10月 (17)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_9" href="http://www.cnblogs.com/benhuan/archive/2012/09.html">2012年9月 (8)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_10" href="http://www.cnblogs.com/benhuan/archive/2011/09.html">2011年9月 (6)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_11" href="http://www.cnblogs.com/benhuan/archive/2011/08.html">2011年8月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_12" href="http://www.cnblogs.com/benhuan/archive/2011/07.html">2011年7月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_13" href="http://www.cnblogs.com/benhuan/archive/2011/05.html">2011年5月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_14" href="http://www.cnblogs.com/benhuan/archive/2011/04.html">2011年4月 (5)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap" style="display: none;">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div id="RecentCommentsBlock"></div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/benhuan/p/3302114.html">1. doxygen的特定命令(336)</a></li><li><a href="http://www.cnblogs.com/benhuan/archive/2012/11/24/3302067.html">2. How To Use A Launchpad PPA (Add, Remove, Purge, Disable) In Ubuntu(308)</a></li><li><a href="http://www.cnblogs.com/benhuan/archive/2012/10/30/3302049.html">3. find grep xargs 命令详解(303)</a></li><li><a href="http://www.cnblogs.com/benhuan/archive/2012/11/04/linux-desktop-entry-analysis.html">4. Linux Desktop Entry 文件深入解析(299)</a></li><li><a href="http://www.cnblogs.com/benhuan/p/3302110.html">5. 我拿树莓派来做什么(241)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap" style="display: none;">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap" style="display: none;">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2018 benhuan
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+<div style="position: static; width: 0px; height: 0px; border: none; padding: 0px; margin: 0px;"><div id="trans-tooltip"><div id="tip-left-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left-top.png&quot;);"></div><div id="tip-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-top.png&quot;) repeat-x;"></div><div id="tip-right-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right-top.png&quot;);"></div><div id="tip-right" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right.png&quot;) repeat-y;"></div><div id="tip-right-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-right-bottom.png&quot;);"></div><div id="tip-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-bottom.png&quot;) repeat-x;"></div><div id="tip-left-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left-bottom.png&quot;);"></div><div id="tip-left" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-left.png&quot;);"></div><div id="trans-content"></div></div><div id="tip-arrow-bottom" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-arrow-bottom.png&quot;);"></div><div id="tip-arrow-top" style="background: url(&quot;chrome-extension://ikkepelhgbcgmhhmcmpfkjmchccjblkd/imgs/map/tip-arrow-top.png&quot;);"></div></div><div id="haloword-lookup" class="ui-widget-content ui-draggable"><div id="haloword-title"><span id="haloword-word"></span><a herf="#" id="haloword-pron" class="haloword-button" title="发音"></a><div id="haloword-control-container"><a herf="#" id="haloword-close" class="haloword-button" title="关闭查询窗"></a></div><br style="clear: both;"></div><div id="haloword-content"></div></div></body></html>
